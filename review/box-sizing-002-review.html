@@ -8,30 +8,26 @@
     <meta name="flags" content="">
     <meta name="assert" content="box-sizing with border-box sets the width and the height of the element so that it takes padding and border widths into account.">
     <style>
-
-       .background {
-           box-sizing: border-box;
-           width: 200px;
-           height: 200px;
-           border:20px solid red;
-           background-color: red;
-           position:absolute;
-           top:50px;
-           left:10px;
-       }
-       .forward{
-           width: 200px;
-           height: 200px;
-           background-color: green;
-           position:absolute;
-           top:50px;
-           left:10px;
-       }
+        div {
+            height: 200px;
+            left: 10px;
+            position: absolute;
+            top: 50px;
+            width: 200px;
+        }
+        .test-overlapped-red {
+            background-color: red;
+            border: 20px solid red;
+            box-sizing: border-box;
+        }
+        .ref-overlapping-green {
+            background-color: green;
+        }
     </style>
 </head>
 <body>
     <p>Test passes if there is a filled green square and <strong>no red</strong>.</p>
-    <div class="background"></div>
-    <div class="forward"></div>    
+    <div class="test-overlapped-red"></div>
+    <div class="ref-overlapping-green"></div>    
 </body>
 </html>
