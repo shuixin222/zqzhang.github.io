@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CSS UI box-sizing : Test for box-sizing: border-box</title>
+    <title>CSS UI Test: box-sizing - border-box</title>
     <link rel="author" title="Ryo Kashiwagi" href="mailto:kasshisatari@gmail.com">
     <link rel="help" href="http://www.w3.org/TR/css3-ui/#box-sizing">
-    <link rel="match" href="border-box-001-ref.html">
+    <link rel="match" href="box-sizing-001-ref.html">
     <meta name="flags" content="">
     <meta name="assert" content="box-sizing with border-box sets the width and the height of the element so that it takes padding and border widths into account.">
-    <style type="text/css">
+    <style>
 
        .background {
            box-sizing: border-box;
@@ -30,7 +30,7 @@
     </style>
 </head>
 <body>
-    <p>The test passes if there is only a green box.</p>
+    <p>Test passes if there is a filled green square and <strong>no red</strong>.</p>
     <div class="background"></div>
     <div class="forward"></div>    
 </body>

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CSS UI box-sizing: Test for box-sizing: padding-box</title>
+    <title>CSS UI Test: box-sizing - padding-box</title>
     <link rel="author" title="Hiromi Hayashi" href="mailto:hayashih@gmail.com">
-    <link rel="help" href="http://www.w3.org/TR/2012/WD-css3-ui-20120117/#box-sizing0">
-    <link rel="match" href="padding-box-001-ref.html">
+    <link rel="help" href="http://www.w3.org/TR/css3-ui/#box-sizing">
+    <link rel="match" href="box-sizing-001-ref.html">
     <meta name="flags" content="">
     <meta name="assert" content="box-sizing with padding-box sets the width and height of the element so that is takes padding widths into account.">
-    <style type="text/css">
+    <style>
  
        .background {
            box-sizing: padding-box;
@@ -30,7 +30,7 @@
     </style>
 </head>
 <body>
-    <p>The test passes if there is a green box.</p>
+    <p>Test passes if there is a filled green square and <strong>no red</strong>.</p>
     <div class="background"></div>
     <div class="forward"></div>    
 </body>
