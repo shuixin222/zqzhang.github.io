@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CSS Basic User Interface Test: box-sizing - border-box</title>
+    <title>CSS Basic User Interface Test: box-sizing - border-box (basic)</title>
     <link rel="author" title="Ryo Kashiwagi" href="mailto:kasshisatari@gmail.com">
-    <link rel="help" href="http://www.w3.org/TR/css3-ui/#box-sizing">
-    <link rel="match" href="box-sizing-001-ref.html">
+    <link rel="help" href="http://www.w3.org/TR/css3-ui/#box-sizing" title="6.1. 'box-sizing' property">
+    <link rel="match" href="ref-filled-green-100px-square.xht">
     <meta name="flags" content="">
     <meta name="assert" content="box-sizing with border-box sets the width and the height of the element so that it takes padding and border widths into account.">
     <style>
         div {
-            height: 200px;
-            left: 10px;
+            height: 100px;
             position: absolute;
-            top: 50px;
-            width: 200px;
+            width: 100px;
         }
-        .test-overlapped-red {
+        #test-overlapped-red {
             background-color: red;
-            border: 20px solid red;
+            border: 50px solid red;
             box-sizing: border-box;
         }
-        .ref-overlapping-green {
+        #ref-overlapping-green {
             background-color: green;
         }
     </style>
 </head>
 <body>
     <p>Test passes if there is a filled green square and <strong>no red</strong>.</p>
-    <div class="test-overlapped-red"></div>
-    <div class="ref-overlapping-green"></div>    
+    <div id="test-overlapped-red"></div>
+    <div id="ref-overlapping-green"></div>    
 </body>
 </html>
