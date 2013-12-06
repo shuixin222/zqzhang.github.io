@@ -1,0 +1,3 @@
+[submodule "srcset"]
+	path = srcset
+	url = ../srcset.git
