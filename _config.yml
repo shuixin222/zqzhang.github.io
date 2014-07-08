@@ -1,15 +1,2 @@
-# This is the default format.
-# For more see: http://jekyllrb.com/docs/permalinks/
-permalink: /:categories/:year/:month/:day/:title
-
-baseurl:   ""
-
 exclude: ["README.md"]
-
-title: Zhiqiang's Home
-author:
-  name: Zhiqiang Zhang
-  email: zqzhang.cas@gmail.com
-  github: zqzhang
-
 
