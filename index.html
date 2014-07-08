@@ -11,7 +11,9 @@ title: Zhiqiang's Home
 
   {% for post in site.posts %}
 
-    <li>{{ post.data | date_to_string }}
+    <li>
+
+      {{ post.data | date_to_string }}
 
       <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 
