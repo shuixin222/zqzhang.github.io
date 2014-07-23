@@ -1,12 +1,12 @@
 # RFC 7303 (replaces RFC 3023) XML Media Types
 
-�����յ�һ������W3C���ʼ���˵��[RFC 7303](http://www.rfc-editor.org/rfc/rfc7303.txt)�����ˡ�
-��Ϊ��Ŀ����Ҫ���õ���XML��ʽ�ļ�������Ҳ�����˽�һ�¡�
+今天收到一封来自W3C的邮件，说是[RFC 7303](http://www.rfc-editor.org/rfc/rfc7303.txt)发布了。
+因为项目的需要，用到了XML格式文件，所以也就想了解一下。
 
-�ܾ��廥�������������飨IETF�����俪���Ļ�������׼�淶���Ǵ��ı��ļ�������ʽ�൱�淶���ۣ�Ψһ����
-���ǣ�û��Ŀ¼��ǩ���ܣ��ü��±����������Ķ��Ļ����൱���ࡣ�����룬��û��RFC�Ķ���֮��ģ��Ͼ���
-���������ô��ͬѧ�������õ�RFC���ǡ�һ��������Ȼ�С�[RFC�ĵ��Ķ�����RFC Reader����������]
-(http://blog.csdn.net/ppy521/article/details/8006207) ���Ƽ���qRFCView��˵����IETF�ٷ��Ƽ����Ķ�
-���ߣ�����ǿ�󣬷ǳ�ʵ�á�ֻ�������ص�ַ������http://sourceforge.net/projects/qrfcview.berlios/
+很敬佩互联网工程任务组（IETF），其开发的互联网标准规范都是纯文本文件，但格式相当规范美观；唯一不足
+的是，没有目录书签功能，用记事本或者在线阅读的话，相当辛苦。所以想，有没有RFC阅读器之类的，毕竟做
+网络的有那么多同学，都会用到RFC不是。一搜索，果然有。[RFC文档阅读器（RFC Reader）软件介绍]
+(http://blog.csdn.net/ppy521/article/details/8006207) 中推荐了qRFCView，说它是IETF官方推荐的阅读
+工具，功能强大，非常实用。只不过下载地址现在是http://sourceforge.net/projects/qrfcview.berlios/
 
-��δ�������
+（未完待续）
