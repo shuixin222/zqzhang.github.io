@@ -118,4 +118,60 @@ WebView based Cordova instance or using a Crosswalk Cordova blink based instance
 The device is registering it as playing but no actual sound is emitted.
 
 This question is still open at [Stack Overflow]
-(http://stackoverflow.com/questions/24543387/html5-audio-not-working-on-crosswalk-cordova-or-standard-cordova-based-webview-o). We may need to improve existing use-case to reproduce this issue.
+(http://stackoverflow.com/questions/24543387/html5-audio-not-working-on-crosswalk-cordova-or-standard-cordova-based-webview-o). QA may need to improve existing use-case to reproduce this issue.
+
+## Problem with accelerometer on Moto G
+
+Robert Cohn runs this APK,
+https://drive.google.com/file/d/0B4MlW1-_vxuaNk1KUnFHQ1RGb1E/edit?usp=sharing,
+when playing the game, tilt the phone left & right to move the player;
+the player does not move on Moto G, but works on Nexus 4 and other phones. This
+issue is tracked at https://crosswalk-project.org/jira/browse/XWALK-2159
+
+QA may extract the files from the APK and create an use-case test accordingly.
+
+## Return the proper Error code when open the proper URL
+
+Hengzi Wu reports [a bug that open a non-existed URL](https://crosswalk-project.org/jira/browse/XWALK-2158),
+e.g. "file:///android_asset/does_not_exist.html", the Error code should be
+`ERROR_FILE_NOT_FOUND` rather than `ERROR_UNKNOWN`.
+
+QA needs to create a test case for this change.
+
+## `<a target="_blank">` does not work in Crosswalk Cordova
+
+Gao Chun reports [a bug regards to `<a target="_blank">`]
+(https://crosswalk-project.org/jira/browse/XWALK-2157): after click the
+hyper-link 'GO", the app should navigate to http://www.intel.com but the
+navigation failed.
+
+QA needs to create a test case to check that `<a target="_blank">` works.
+
+## XWalk Cordova doesn't seem to set `window.navigator.language` - always en-US
+
+Lucas Gunn reports this issue at https://crosswalk-project.org/jira/browse/XWALK-2132.
+
+QA is able to create an use-case test based on the steps to reproduce:
+1. Set Android phone language to Espanol (Estados Unidos)
+2. Create cordova app, log window.navigator.language, logs es-US
+3. Convert app to xwalk app
+4. Re-run, now it will log en-US
+
+## Rebase to Chromium 37
+
+Francesco says in https://crosswalk-project.org/jira/browse/XWALK-1969 that
+for verification, ensure that Chromium 37 features are added to the test plan.
+For reference see http://www.chromestatus.com/features
+
+At Chromium 37, there are 7 new features out of 11 in enabled by default
+implementation status without prefix. These features are <dialog> Element,
+CSS Shapes Module Level 1, DirectWrite on Windows, Navigator.hardwareConcurrency,
+NavigatorLanguage: navigator.languages and languagechange event, Subpixel font
+scaling, Web Crypto API
+
+Because such kind of features are not tracked as Crosswalk Features, it is out
+of Crosswalk testing scope. QA is talking to developer managers and project
+manager about which features have been enabled by default on Crosswalk.
+
+For the testable features, QA will run same tests on Chromium 37 and Crosswalk
+to compare the test; only difference will be reported as bug.
