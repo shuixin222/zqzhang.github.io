@@ -152,10 +152,10 @@ QA needs to create a test case to check that `<a target="_blank">` works.
 Lucas Gunn reports this issue at https://crosswalk-project.org/jira/browse/XWALK-2132.
 
 QA is able to create an use-case test based on the steps to reproduce:
-1. Set Android phone language to Espanol (Estados Unidos)
-2. Create cordova app, log window.navigator.language, logs es-US
-3. Convert app to xwalk app
-4. Re-run, now it will log en-US
+* Set Android phone language to Espanol (Estados Unidos)
+* Create cordova app, log window.navigator.language, logs es-US
+* Convert app to xwalk app
+* Re-run, now it will log en-US
 
 ## Rebase to Chromium 37
 
@@ -167,7 +167,7 @@ At Chromium 37, there are 7 new features out of 11 in enabled by default
 implementation status without prefix. These features are <dialog> Element,
 CSS Shapes Module Level 1, DirectWrite on Windows, Navigator.hardwareConcurrency,
 NavigatorLanguage: navigator.languages and languagechange event, Subpixel font
-scaling, Web Crypto API
+scaling, Web Crypto API.
 
 Because such kind of features are not tracked as Crosswalk Features, it is out
 of Crosswalk testing scope. QA is talking to developer managers and project
