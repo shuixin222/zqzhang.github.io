@@ -35,6 +35,11 @@ testing, comparing to `loadUrl("javascript:xxx")` with Android WebView. See
 [the thread at crosswalk-help]
 (https://lists.crosswalk-project.org/pipermail/crosswalk-help/2014-July/000290.html)
 
+On [Stack Overflow]
+(http://stackoverflow.com/questions/24601087/crosswalk-call-js-function-from-java-on-android),
+Gokhan Gokce insists on [`public void evaluateJavascript (String script, callback)`]
+(https://crosswalk-project.org/apis/embeddingapidocs/reference/org/xwalk/core/XWalkView.html#evaluateJavascript(java.lang.String, <any>)) is better. Shall have some tests for this API too.
+
 ## XHR Requests in XWalkView
 
 Leonardo Tegon wants to make AJAX requests from index.html to local files
@@ -57,8 +62,7 @@ XWalkView by use of TextureView as the target compositing surface.
 
 We may need some tests for the animatible XWalkView accordingly.
 
-## [Intent to Implement]
-(https://lists.crosswalk-project.org/pipermail/crosswalk-dev/2014-July/thread.html)
+## Intent to Implement
 
 1. **Remove application un/installation functionality from xwalk binary**
    [The install/uninstall/list-apps functionality will go to 'xwalkctl' binary]
@@ -97,6 +101,7 @@ Joone Hur is working on File-picker for Crosswalk and Chromium(Ozone-wayland)
 using WebUI.
 * https://crosswalk-project.org/jira/browse/XWALK-950
 * https://github.com/01org/ozone-wayland/issues/147
+
 If that comes true, one can try to open chrome://file-picker and chrome://gpu
 Thus Crosswalk provides system dialog boxes (file-picker or printing) and
 system menu (settings or help) like Chromium.
@@ -105,3 +110,12 @@ Shouqun Liu [added WebUI support for Crosswalk on Tizen]
 (https://github.com/crosswalk-project/crosswalk/pull/2163). We may need some
 test cases checking it.
 
+## HTML5 Audio not working on Crosswalk Cordova or standard Cordova based WebView on Android 4.4
+
+@patrickjquinn is trying to use the HTML Audio API to play a mp3 file from
+a remote HTTP source. Its flat out not working on either Android's default
+WebView based Cordova instance or using a Crosswalk Cordova blink based instance.
+The device is registering it as playing but no actual sound is emitted.
+
+This question is still open at [Stack Overflow]
+(http://stackoverflow.com/questions/24543387/html5-audio-not-working-on-crosswalk-cordova-or-standard-cordova-based-webview-o). We may need to improve existing use-case to reproduce this issue.
