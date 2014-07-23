@@ -47,3 +47,61 @@ resources via XHR in XWalkView, `XWalkView.load("file://" + folderPath, null);`
 So QA needs test cases to verify [Crosswalk Embedding API XWALKView]
 (https://crosswalk-project.org/apis/embeddingapidocs/reference/org/xwalk/core/XWalkView.html)
 
+## Documentation about animatible XWalkView
+
+Hongbo Min documents [Android SurfaceView v.s. TextureView]
+(https://crosswalk-project.org/#wiki/Android-SurfaceView-vs-TextureView) to
+address potential questions like when to use animitable XWalkView and what is
+the difference, because the embedding API for Android supports the animatible
+XWalkView by use of TextureView as the target compositing surface.
+
+We may need some tests for the animatible XWalkView accordingly.
+
+## [Intent to Implement]
+(https://lists.crosswalk-project.org/pipermail/crosswalk-dev/2014-July/thread.html)
+
+1. **Remove application un/installation functionality from xwalk binary**
+   [The install/uninstall/list-apps functionality will go to 'xwalkctl' binary]
+   (https://lists.crosswalk-project.org/pipermail/crosswalk-dev/2014-July/001638.html).
+   This change needs WRT tests if it becomes true.
+2. **Tizen Web Application Protection**
+   with reference to the [Tizen 2.x WRT Core Specification]
+   (https://source.tizen.org/sites/default/files/page/tizen-2.2-wrt-core-spec.pdf)
+   and related features in JIRA [XWALK-1491]
+   (https://crosswalk-project.org/jira/browse/XWALK-1491), [XWALK-1172]
+   (https://crosswalk-project.org/jira/browse/XWALK-1172).
+3. **W3C NFC API for Tizen**
+   with [specification](http://www.w3.org/TR/nfc/), [feature XWALK-432]
+   (https://crosswalk-project.org/jira/browse/XWALK-432) and [implementation]
+   (https://github.com/crosswalk-project/tizen-extensions-crosswalk/pull/346).
+4. **Pluggable extensions for	embedding API**
+   with feature [XWALK-1052](https://crosswalk-project.org/jira/browse/XWALK-1152).
+5. **Multiarch packages via	expansion files**
+   with [Android Expansion File Info Spec]
+   (https://developer.android.com/google/play/expansion-files.html) and feature
+   [XWALK-1626](https://crosswalk-project.org/jira/browse/XWALK-1626).
+6. **Suspend and resume web	application for Tizen**
+   with reference to the [Tizen 2.x WRT Core Specification]
+   (https://source.tizen.org/sites/default/files/page/tizen-2.2-wrt-core-spec.pdf)
+   and related features in JIRA [XWALK-1497]
+   (https://crosswalk-project.org/jira/browse/XWALK-1497), [XWALK-1498]
+   (https://crosswalk-project.org/jira/browse/XWALK-1498).
+7. **Extension Manager Tool for	Crosswalk Projects**
+   with feature [XWALK-1947](https://crosswalk-project.org/jira/browse/XWALK-1947).
+8. **Tizen Widget Signature**
+   targets Crosswalk 9.
+
+## Adding WebUI to Crosswalk (for Tizen)
+
+Joone Hur is working on File-picker for Crosswalk and Chromium(Ozone-wayland)
+using WebUI.
+* https://crosswalk-project.org/jira/browse/XWALK-950
+* https://github.com/01org/ozone-wayland/issues/147
+If that comes true, one can try to open chrome://file-picker and chrome://gpu
+Thus Crosswalk provides system dialog boxes (file-picker or printing) and
+system menu (settings or help) like Chromium.
+
+Shouqun Liu [added WebUI support for Crosswalk on Tizen]
+(https://github.com/crosswalk-project/crosswalk/pull/2163). We may need some
+test cases checking it.
+
