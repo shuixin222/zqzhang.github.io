@@ -168,11 +168,11 @@ For reference see http://www.chromestatus.com/features
 
 At Chromium 37, there are 7 new features out of 11 in enabled by default
 implementation status without prefix. These features are:
-* <dialog> Element
+* `<dialog>` Element
 * CSS Shapes Module Level 1
 * DirectWrite on Windows
 * Navigator.hardwareConcurrency
-* NavigatorLanguage: navigator.languages and languagechange event
+* NavigatorLanguage: `navigator.languages` and `languagechange` event
 * Subpixel font scaling
 * Web Crypto API.
 
