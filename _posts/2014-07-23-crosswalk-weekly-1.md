@@ -23,7 +23,8 @@ This sample can be converted to an use-case test at [webapi-usecase-w3c-tests]
 Because the sample contains an audio clip, v-contra.mp3, and some scripts,
 Zhiqiang is confirming with the author about the origin of the audio clip and
 the scripts, to see if they are OK to be published under BSD 3-Claused License;
-but haven't had any responses so far.
+and gets feedback from the author that he will change the audio file that is included in the sample
+and make some other minor modifications.
 
 ## Calling JS function from Java
 
@@ -38,7 +39,8 @@ testing, comparing to `loadUrl("javascript:xxx")` with Android WebView. See
 On [Stack Overflow]
 (http://stackoverflow.com/questions/24601087/crosswalk-call-js-function-from-java-on-android),
 Gokhan Gokce insists on [`public void evaluateJavascript (String script, callback)`]
-(https://crosswalk-project.org/apis/embeddingapidocs/reference/org/xwalk/core/XWalkView.html#evaluateJavascript(java.lang.String, <any>)) is better. Shall have some tests for this API too.
+(https://crosswalk-project.org/apis/embeddingapidocs/reference/org/xwalk/core/XWalkView.html#evaluateJavascript(java.lang.String, <any>))
+is better. Shall have some tests for this API too.
 
 ## XHR Requests in XWalkView
 
@@ -118,7 +120,8 @@ WebView based Cordova instance or using a Crosswalk Cordova blink based instance
 The device is registering it as playing but no actual sound is emitted.
 
 This question is still open at [Stack Overflow]
-(http://stackoverflow.com/questions/24543387/html5-audio-not-working-on-crosswalk-cordova-or-standard-cordova-based-webview-o). QA may need to improve existing use-case to reproduce this issue.
+(http://stackoverflow.com/questions/24543387/html5-audio-not-working-on-crosswalk-cordova-or-standard-cordova-based-webview-o).
+QA may need to improve existing test case to reproduce this issue.
 
 ## Problem with accelerometer on Moto G
 
@@ -128,7 +131,7 @@ when playing the game, tilt the phone left & right to move the player;
 the player does not move on Moto G, but works on Nexus 4 and other phones. This
 issue is tracked at https://crosswalk-project.org/jira/browse/XWALK-2159
 
-QA may extract the files from the APK and create an use-case test accordingly.
+QA may extract the files from the APK and create a test case accordingly.
 
 ## Return the proper Error code when open the proper URL
 
@@ -164,10 +167,14 @@ for verification, ensure that Chromium 37 features are added to the test plan.
 For reference see http://www.chromestatus.com/features
 
 At Chromium 37, there are 7 new features out of 11 in enabled by default
-implementation status without prefix. These features are <dialog> Element,
-CSS Shapes Module Level 1, DirectWrite on Windows, Navigator.hardwareConcurrency,
-NavigatorLanguage: navigator.languages and languagechange event, Subpixel font
-scaling, Web Crypto API.
+implementation status without prefix. These features are:
+* <dialog> Element
+* CSS Shapes Module Level 1
+* DirectWrite on Windows
+* Navigator.hardwareConcurrency
+* NavigatorLanguage: navigator.languages and languagechange event
+* Subpixel font scaling
+* Web Crypto API.
 
 Because such kind of features are not tracked as Crosswalk Features, it is out
 of Crosswalk testing scope. QA is talking to developer managers and project
