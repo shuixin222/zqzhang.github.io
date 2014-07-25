@@ -10,6 +10,8 @@ approach.
 * Make sure the issues are covered by QA; check if new test cases are needed.
 * Improve test coverage and approach from feedbacks.
 * Raise opens to program for decision if they cannot be handled by QA directly.
+* Track TODOs as tasks in Crosswalk JIRA -> Test Suite, assign to QA owner.
+* Review JIRA tasks weekly for new ones and process of existing.
 
 ## Crosswalk Community
 

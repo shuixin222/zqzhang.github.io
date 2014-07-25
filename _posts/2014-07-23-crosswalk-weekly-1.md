@@ -26,6 +26,17 @@ the scripts, to see if they are OK to be published under BSD 3-Claused License;
 and gets feedback from the author that he will change the audio file that is included in the sample
 and make some other minor modifications.
 
+Digging into the sample, I find that it has used at least below features in webapi testing scope:
+* WebAudio
+*	Audio element
+*	XMLHttpRequst
+*	Session history
+
+So we will create a test suite **misc/xwalk-system-tests** for this case. You can put all test cases
+that you feel they are difficult to be in existing test suites, especially from samples, bugs and
+mailing lists from the community. This test suite will leverage behavior/usecase testing framework
+if no better option.
+
 ## Calling JS function from Java
 
 Gokhan Gokce is trying to use Crosswalk Runtime in his Android app, but finds
