@@ -90,7 +90,7 @@ This is why I am afraid, when you say that you love me too.
 
 你有本事说爱我，你有本事捡肥皂啊！
 
-## 七律压轴版：
+## 七律压轴版
 
 江南三月雨微茫，罗伞蝶烟湿幽香。
 
@@ -102,5 +102,5 @@ This is why I am afraid, when you say that you love me too.
 
 ## 后记
 
-吾甚喜“诗经版”；遗憾的是，最近在校订[ES5中文译文](https://github.com/w3c-html-ig-zh/ES5)时，只能采用
-普通版。
+吾甚喜`诗经版`；遗憾的是，最近在校订[ES5中文译文](https://github.com/w3c-html-ig-zh/ES5)时，只能采用
+`普通版`。
