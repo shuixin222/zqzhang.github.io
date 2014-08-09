@@ -26,6 +26,14 @@
 
 另，好几次都想，为何不能废弃[这个XML方案](https://github.com/testkit/testkit-lite/tree/master/xsd)，转投[W3C Manifest的方案](https://github.com/w3c/web-platform-tests/blob/master/tools/scripts/manifest.py)呢？
 
+# 构建基于GitHub和Bootstrap的个人主页
+
+目前这个主页，显示效果很不好，都不好意思和同学分享。看了[Test the Web Forward](http://testthewebforward.org/)主页及其代码，并在手机上看了效果，觉得很不错。就想参考着做个主页，除了包含博客内容及个人简介简历，还想把[曾经分享过的幻灯片](http://zqzhang.github.io/reveal.js/)做进来，统一维护。即：
+
+* about/resume
+* blog
+* slides
+
 # [寒冬winter的9个题目](http://weibo.com/p/1001603741249222874725)
 
 > 感兴趣的同学可以试试。
