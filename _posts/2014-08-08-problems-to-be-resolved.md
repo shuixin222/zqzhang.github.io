@@ -25,3 +25,25 @@
 目前，已经有同学实现了单个文件仅有一个测试用例的情况，而对单个文件多个测试用例的情景，没有实现，只有一些想法。想将之攻克。
 
 另，好几次都想，为何不能废弃[这个XML方案](https://github.com/testkit/testkit-lite/tree/master/xsd)，转投[W3C Manifest的方案](https://github.com/w3c/web-platform-tests/blob/master/tools/scripts/manifest.py)呢？
+
+# [寒冬winter的9个题目](http://weibo.com/p/1001603741249222874725)
+
+> 感兴趣的同学可以试试。
+
+> 谈谈你对CSS布局的理解
+
+> 讲讲输入完网址按下回车，到看到网页这个过程中发生了什么。
+
+> 谈谈你对Web前端组件化的理解，Web Component会带来怎样的影响
+
+> 谈谈你对前端资源下载性能优化的经验和思考
+
+> 现在有很多的MV*框架，你对它们有什么看法
+
+> iOS体验好在哪里，Web能赶上么？
+
+> 网页游戏怎么做？
+
+> Hybrid技术应当如何应用？
+
+> 你最爱的前端框架是什么，为什么？
