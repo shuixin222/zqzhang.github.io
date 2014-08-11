@@ -1,6 +1,10 @@
-# Crosswalk Weekly 2
+---
+layout: post
+type: post
+title: Crosswalk Weekly 2
+---
 
-Crosswalk Weekly is a summary of activity on the Crosswalk Community from QA's perspective, to get inputs to improve [crosswalk-test-suite](https://github.com/crosswalk-project/crosswalk-test-suite) test coverage and approach.
+Crosswalk Weekly is a summary of activity on the Crosswalk Community from QA perspective, to get inputs to improve [crosswalk-test-suite](https://github.com/crosswalk-project/crosswalk-test-suite) test coverage and approach.
 
 ## Pull Requests from outside of Web QA Team
 

@@ -1,4 +1,8 @@
-# Test the Web Forward at Beijing
+---
+layout: post
+type: post
+title: Test the Web Forward at Beijing
+---
 
 ## Presentations
 

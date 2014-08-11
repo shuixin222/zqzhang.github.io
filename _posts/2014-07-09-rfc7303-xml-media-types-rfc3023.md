@@ -1,4 +1,8 @@
-# RFC 7303 (replaces RFC 3023) XML Media Types
+---
+layout: post
+type: post
+title: RFC 7303 (replaces RFC 3023) XML Media Types
+---
 
 今天收到一封来自W3C的邮件，说是[RFC 7303](http://www.rfc-editor.org/rfc/rfc7303.txt)发布了。
 因为项目需要，用到了XML格式文件，所以也就想了解一下。

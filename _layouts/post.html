@@ -1,0 +1,12 @@
+---
+layout: default
+section: blog
+---
+<article>
+  {% include blog/title.html post=page %}
+  
+  {{ content }}
+  
+</article>
+{% include blog/pager.html %}
+

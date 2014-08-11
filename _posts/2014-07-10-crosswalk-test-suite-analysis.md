@@ -1,4 +1,8 @@
-﻿# crosswalk-test-suite代码库分析
+﻿---
+layout: post
+type: post
+title: crosswalk-test-suite代码库分析
+---
 
 顾名思义，[crosswalk-test-suite](https://github.com/crosswalk-project/crosswalk-test-suite)
 是Crosswalk项目的官方测试套件。（未完待续）

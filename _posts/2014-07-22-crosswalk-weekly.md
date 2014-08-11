@@ -1,4 +1,8 @@
-# Crosswalk Weekly
+---
+layout: post
+type: post
+title: Crosswalk Weekly
+---
 
 Crosswalk Weekly is a summary of activity on the Crosswalk Community from QA's
 perspective, to get inputs to improve [crosswalk-test-suite]
