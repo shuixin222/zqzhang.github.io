@@ -11,8 +11,8 @@ Crosswalk Weekly is a summary of activity on the Crosswalk Community from QA's p
 * Make sure the issues are covered by QA; check if new test cases are needed.
 * Improve test coverage and approach from feedbacks.
 * Raise opens to program for decision if they cannot be handled by QA directly.
-* Track TODOs as tasks in Crosswalk JIRA -> Test Suite, assign to QA owner.
-* Review JIRA tasks weekly for new ones and process of existing.
+* Track TODOs as [crosswalk-test-suite issues](https://github.com/crosswalk-project/crosswalk-test-suite/issues), assign to QA owner.
+* Review issues weekly for new ones and process of existing.
 
 ## Crosswalk Community
 
