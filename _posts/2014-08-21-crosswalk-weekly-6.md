@@ -38,7 +38,13 @@ Zhiqiang is also watching below features for HW video decoding and audio policy 
 | [XWALK-2322](https://crosswalk-project.org/jira/browse/XWALK-2322) | [community][webapi] Create use-case test checking hide/recover several time | [XWALK-2199](https://crosswalk-project.org/jira/browse/XWALK-2199) `tizen.application.getCurrentApplication().hide()` works once | Create use-case tests |
 | [XWALK-2326](https://crosswalk-project.org/jira/browse/XWALK-2326) | [community][webapi] Add test case for H.264 support of WebRTC | Depends on [XWALK-2310](https://crosswalk-project.org/jira/browse/XWALK-2310) | Create use-case or system tests |
 | [XWALK-2331](https://crosswalk-project.org/jira/browse/XWALK-2331) | [community][webapi] Add test case for media source API test pause | Based on [XWALK-2231](https://crosswalk-project.org/jira/browse/XWALK-2231) | Create use-case or system tests |
+| [XWALK-2367](https://crosswalk-project.org/jira/browse/XWALK-2367) | height=device-height viewport is overllaped by device buttons on tabblet | `<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,height=device-height,minimal-ui">` | Create a test case |
+| [XWALK-2368](https://crosswalk-project.org/jira/browse/XWALK-2368) | [webapi] BlobBuilder is deprecated | [BlobBuilder should not be supported](https://github.com/w3c/web-platform-tests/blob/master/FileAPI/historical.html); [Don't Build Blobs, Construct Them](http://updates.html5rocks.com/2012/06/Don-t-Build-Blobs-Construct-Them) | Revise related test cases |
 
 ## Test Upstream to W3C
 
-
+1. [Create test cases for Vibration to cover the TODO list](http://lists.w3.org/Archives/Public/public-device-apis/2014Aug/0019.html)
+2. [Review reference files submitted to csswg-test repo](https://github.com/w3c/csswg-test/pulls/chenxix)
+3. [Review test cases for IndexedDB](https://github.com/w3c/web-platform-tests/labels/IndexedDB)
+4. [Review test cases for Server Sent Event](https://github.com/w3c/web-platform-tests/labels/eventsource)
+5. Regenerate test results after the above and report to working groups
