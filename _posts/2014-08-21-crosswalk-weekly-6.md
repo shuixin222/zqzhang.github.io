@@ -30,6 +30,21 @@ Zhiqiang is also watching below features for HW video decoding and audio policy 
 
 ## Chromium 38 Features
 
+See [Chromium Web Platform Features](http://www.chromestatus.com/features) for details.
+
+| Feature | Description | Implementation Status | Specification | Upstream Test |
+| :------ | :---------- | :-------------------- | :------------ | :------------ |
+| `any-pointer` and `any-hover` Media Queries | Media queries for determining capabilities of a UA's pointer devices | Enabled by default | [http://www.w3.org/TR/2014/WD-mediaqueries-4-20140605/#any-input](http://www.w3.org/TR/2014/WD-mediaqueries-4-20140605/#any-input) | |
+| File constructor | A programmatic method of constructing File objects, very similar to how Blob objects are built. | Enabled by default | [http://dev.w3.org/2006/webapi/FileAPI/#file](http://dev.w3.org/2006/webapi/FileAPI/#file) | |
+| JS iterators (i.e. the for-of feature) (ES6)| Iterates over iterable objects (including arrays, array-like objects, iterators and generators), invoking a custom iteration hook with statements to be executed for the value of each distinct property. | Enabled by default | [https://people.mozilla.org/~jorendorff/es6-draft.html#sec-iteration-statements](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-iteration-statements) | |
+| Map (ES6) | Map objects are simple key/value maps. | Enabled by default | [https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects) | |
+| Math functions (ES6) | Math related functions - `sign`, `trunc`, `sinh`, `cosh`, `tanh`, `asinh`, `acosh`, `atanh`, `log10`, `log2`, `hypot`, `fround`, `clz32`, `cbrt`, `log1p`, `expm1` (as `Math.sign(...)`, `Math.trunc(...)` and so on). | Enabled by default | [https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math-object](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-math-object) | |
+| Navigation Transitions | Allows web authors to both improve the perceived loading speed as well as provide visual polish by allowing two pages to coordinate on a transition animation (regardless of their origin). | Behind a flag | [Editor's draft](https://docs.google.com/document/d/17jg1RRL3RI969cLwbKBIcoGDsPwqaEdBxafGNYGwiY4/edit?pli=1#heading=h.pcll678prpwu) | |
+| Screen Orientation API | Gives ability to read the screen orientation and lock it. | Enabled by default | [https://w3c.github.io/screen-orientation/](https://w3c.github.io/screen-orientation/) | |
+| Set (ES6) | Set objects let you store unique values of any type, whether primitive values or object references. | Enabled by default | [http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts](http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts) | |
+| Symbols (ES6) | Allows properties to be added to existing objects without the possibility of interference with the existing properties, unintended visibility, or with other uncoordinated additions by any other code. | Enabled by default | [https://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-objects](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol-objects) | |
+| Unscopables (ES6) | Unscopables allows properties to be hidden to with statement lookup rules. This is important for adding new properties to existing objects both in JavaScript and in DOM. | Enabled by default | [https://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol.unscopables](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol.unscopables) | |
+| `image-rendering: pixelated` | `image-rendering: pixelated` indicates that image should be scaled "so that the image appears to be simply composed of very large pixels", e.g. using nearest-neighbour. | Enabled by default | [http://www.w3.org/TR/css4-images/#image-rendering](http://www.w3.org/TR/css4-images/#image-rendering) | Samples [jsfiddle.net/zda24/147/](jsfiddle.net/zda24/147/) |
 
 ## Test Case Tasks
 
@@ -38,7 +53,7 @@ Zhiqiang is also watching below features for HW video decoding and audio policy 
 | [XWALK-2322](https://crosswalk-project.org/jira/browse/XWALK-2322) | [community][webapi] Create use-case test checking hide/recover several time | [XWALK-2199](https://crosswalk-project.org/jira/browse/XWALK-2199) `tizen.application.getCurrentApplication().hide()` works once | Create use-case tests |
 | [XWALK-2326](https://crosswalk-project.org/jira/browse/XWALK-2326) | [community][webapi] Add test case for H.264 support of WebRTC | Depends on [XWALK-2310](https://crosswalk-project.org/jira/browse/XWALK-2310) | Create use-case or system tests |
 | [XWALK-2331](https://crosswalk-project.org/jira/browse/XWALK-2331) | [community][webapi] Add test case for media source API test pause | Based on [XWALK-2231](https://crosswalk-project.org/jira/browse/XWALK-2231) | Create use-case or system tests |
-| [XWALK-2367](https://crosswalk-project.org/jira/browse/XWALK-2367) | height=device-height viewport is overllaped by device buttons on tabblet | `<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,height=device-height,minimal-ui">` | Create a test case |
+| [XWALK-2367](https://crosswalk-project.org/jira/browse/XWALK-2367) | `height=device-height` viewport is overllaped by device buttons on tabblet | `<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,height=device-height,minimal-ui">` | Create a test case |
 | [XWALK-2368](https://crosswalk-project.org/jira/browse/XWALK-2368) | [webapi] BlobBuilder is deprecated | [BlobBuilder should not be supported](https://github.com/w3c/web-platform-tests/blob/master/FileAPI/historical.html); [Don't Build Blobs, Construct Them](http://updates.html5rocks.com/2012/06/Don-t-Build-Blobs-Construct-Them) | Revise related test cases |
 
 ## Test Upstream to W3C
