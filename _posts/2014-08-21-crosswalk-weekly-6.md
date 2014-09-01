@@ -30,10 +30,11 @@ Zhiqiang is also watching below features for HW video decoding and audio policy 
 
 ## Chromium 38 Features
 
-See [Chromium Web Platform Features](http://www.chromestatus.com/features) for details.
+See [Chromium Web Platform Features](http://www.chromestatus.com/features#=38) for details.
 
 | Feature | Description | Implementation Status | Specification | Upstream Test |
 | :------ | :---------- | :-------------------- | :------------ | :------------ |
+| `<picture>` Element | Enable a responsive images solution by declaring multiple resources for an image using CSS media queries. | Enabled by default | [picture element](docs.webplatform.org/wiki/html/elements/picture), [responsive-images-done-right-guide-picture-srcset](www.smashingmagazine.com/2014/05/14/responsive-images-done-right-guide-picture-srcset/), [srcset-sizes](ericportis.com/posts/2014/srcset-sizes/) | Samples [picturefill](scottjehl.github.io/picturefill/), [picture-element](github.com/GoogleChrome/samples/tree/gh-pages/picture-element) |
 | `any-pointer` and `any-hover` Media Queries | Media queries for determining capabilities of a UA's pointer devices | Enabled by default | [http://www.w3.org/TR/2014/WD-mediaqueries-4-20140605/#any-input](http://www.w3.org/TR/2014/WD-mediaqueries-4-20140605/#any-input) | Blink tests for CSS4 media query [pointer](https://chromium.googlesource.com/chromium/blink/+/master/LayoutTests/fast/media/mq-pointer.html) and [hover](https://chromium.googlesource.com/chromium/blink/+/master/LayoutTests/fast/media/mq-hover.html) features |
 | File constructor | A programmatic method of constructing File objects, very similar to how Blob objects are built. | Enabled by default | [http://dev.w3.org/2006/webapi/FileAPI/#file](http://dev.w3.org/2006/webapi/FileAPI/#file) | [W3C tests for file constructor](https://github.com/w3c/web-platform-tests/pull/1218) |
 | JS iterators (i.e. the for-of feature) (ES6)| Iterates over iterable objects (including arrays, array-like objects, iterators and generators), invoking a custom iteration hook with statements to be executed for the value of each distinct property. | Enabled by default | [https://people.mozilla.org/~jorendorff/es6-draft.html#sec-iteration-statements](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-iteration-statements) | |
