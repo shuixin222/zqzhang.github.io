@@ -1,12 +1,36 @@
 ---
 layout: post
 type: post
-title: Thinking of 2014 and 2015
+title: The Projects I Care About
 ---
 
 # Crosswalk Tests
 
+在过去的一年里，我大半的时间和精力都放在了 Crosswalk 项目的测试上，主要是测试套件和测试案例方面。
+
 ## [crosswalk-project/crosswalk-test-suite](https://github.com/crosswalk-project/crosswalk-test-suite)
+
+2014年3月19日，经过一系列内部代码调整和定制以及版权信息检查，我们开源了该项目。此后，所有有关 Crosswalk 项目的测试套件和测试案例都在这里进行维护和开发，全部开源。
+
+Crosswalk 项目本身是要构建一款跨平台（操作系统）的 Web 运行时环境，帮助应用程序开发者快速开发和部署应用程序；其目标之一是成为 Tizen 3.0 标配的运行时环境，基于此，Crosswalk Test Suite 采用 [Tizen Compliance Tests](https://source.tizen.org/compliance/compliance-tests) Web TCT 结构，并将 Web TCT 作为蓝本。这样，Crosswalk Test Suite 自产生就有了三个部分：[Behavior Test Tool](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/behavior), [Web APIs](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/webapi), [Web Runtime Core](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/wrt)。
+
+Crosswalk 项目目前被广泛使用主要是因为它能够提供更好的性能和功能而取代 Android 默认的 WebView，同时兼容 Apache Cordova。所以，我们增加了两个部分的测试：[XwalkView Embedding APIs](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/embeddingapi) 和 [Crosswalk Cordova](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/cordova)。
+
+Crosswalk 项目本身提出很多新的特性，针对这些新特性，我们站在应用程序开发者（最终用户）的角度开发了 [Use Case Tests](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/usecase)，用来验证这些特性的实现是否符合需求。这些测试案例基于 Behavior Test Tool 测试架构；后来成为示例代码库 demo-express 的基础。
+
+一个运行时环境项目的成功，离不开长时间的稳定运行，[Stability Tests](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/stability) 即为此目的。此外，我们还开发了一些测试案例，用来验证 Crosswalk Documentation, Web Driver, Chromium 引入的新特性，等等；因为不好归类，放在 [misc](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/misc)。
+
+Crosswalk Test Suite 本身也是一个独立的项目，离不开[文档](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/doc)和[工具](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/tools)的支持。
+
+基于 Crosswalk Test Suite，我们创建了 [Tizen IVI 3.0 Compliance Tests](https://github.com/crosswalk-project/crosswalk-test-suite/tree/ivi-tct)，在不久的将来，会随着 Tizen IVI 3.0 M4 一起发布到 tizen.org 。
+
+2015年，我想我还会投入很多时间和精力在这个项目上：
+
+* 继续维护和开发 WebAPI 相关的测试案例和使用案例；确保 Crosswalk 所支持的特性有很好的质量；优先提交给 W3C, Khronos 等。
+* 自动化集成和更新来自 W3C, Khronos等的测试案例；这一块之前做得不够好，手工耗时耗力。
+* 优化整个项目代码结构，使整体代码尽可能无冗余，参见这些[问题报告](https://github.com/crosswalk-project/crosswalk-test-suite/issues)。
+* 自动化代码格式检查和更新，简化测试案例开发人员的工作。
+* 使用 [Travis CI](https://travis-ci.org/) 来检查每一个提交 (Pull Request)，保持项目的一致性。
 
 ## [crosswalk-project/demo-express](https://github.com/crosswalk-project/demo-express)
 
