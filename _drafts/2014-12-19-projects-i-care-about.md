@@ -34,9 +34,21 @@ Crosswalk Test Suite 本身也是一个独立的项目，离不开[文档](https
 
 ## [crosswalk-project/demo-express](https://github.com/crosswalk-project/demo-express)
 
+顾名思义，该项目主要是快速演示 Crosswalk 所支持的新特性。设计之初，就将该项目做成一个应用程序，使基于 Crosswalk 做产品开发的应用程序开发者以及潜在的 Crosswalk 使用者能够快速了解 Crosswalk 新特性的使用以及如何使用 Crosswalk 运行时环境。
+
+该项目基于 [Use Case Tests](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/usecase) 来实现：将其中所涉及到的测试步骤和测试结果检查做成应用程序的使用步骤；进而实现两者代码级别差异，使之尽可能共用一套代码。
+
+该项目荣获 Intel OTC System Enginieering Orientation (SEO) 部门奖认可 （DRA, Department Recogniation Award）。
+
+后续将使用 [Bootstrap 框架](https://github.com/twbs/bootstrap) 来取代目前的 [jQuery Mobile 框架](https://github.com/jquery/jquery-mobile)；并开发更多的示例。
+
 ## [crosswalk-project/web-testing-service](https://github.com/crosswalk-project/web-testing-service)
 
+Web Testing Service (WTS) 意在搭建一套 Web 测试服务，使得测试和开发人员能够很容易通过浏览器或者运行时环境快速执行测试案例，发现或者重现代码缺陷。目前因为种种原因，只在内部搭建这样一套服务器，公共服务还在争取之中。
+
 ## [crosswalk-project/crosswalk-web-driver](https://github.com/crosswalk-project/crosswalk-web-driver)
+
+该项目基于 ChromeDriver 来实现 Crosswalk 的标准 WebDriver。我因为要使用 W3C 的测试案例来验证该实现是否符合标准，所以关注了它，并提交2个 PR 来修订它的 README 和 LICENSE。如有可能，花些精力帮助其实现，以期将现有的测试案例自动化。
 
 ## [testkit/testkit-lite](https://github.com/testkit/testkit-lite)
 
