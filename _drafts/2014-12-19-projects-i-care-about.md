@@ -74,24 +74,54 @@ Google Chrome 各发布版本所引入的新特性的示例代码；用于测试
 
 ## [w3c/web-platform-tests](https://github.com/w3c/web-platform-tests)
 
+W3C Web 平台规范的测试套件集群，涵盖几乎除 CSS 工作组所发布规范以外的所有规范的测试。其主要目的是用测试驱动 Web 规范的成熟并保证各实现方式方法符合规范要求。因为做 Tizen Web TCT 和 Crosswalk Test Suite 采用相同测试的方法，所以也给这个项目提交很多测试案例。并作为测试协调人，帮助诸如 Indexed DB, Server Sent Event, Vibration 等规范进入推荐候选标准。同时，因为主要检阅其他人提交的测试代码，所以现在有权限直接接受代码提交。
+
+后续仍将花费小半时间来维护测试案例和添加新的测试案例。
+
 ## [w3c/csswg-test](w3c/csswg-test)
+
+W3C CSS 工作组发布的规范所需测试套件集群；因为历史原因，它背后有一个测试套件编译系统，一个代码审查系统，所以还没有集成到 [w3c/web-platform-tests](https://github.com/w3c/web-platform-tests)。
+
+
+后续仍将花费小半时间来维护测试案例和添加新的测试案例。
 
 ## [w3c/testharness.js](https://github.com/w3c/testharness.js)
 
+这是 W3C JS 测试案例所依赖的测试框架，它提供了大量的断言接口，同时支持同步和异步测试。
+
+2014年度，还支持了 Service Worker Promise 测试，详见[这里](https://github.com/w3c/testharness.js/pull/82)。
+
 ## [w3c/wptserve](https://github.com/w3c/wptserve)
+
+专为使用 [w3c/web-platform-tests](https://github.com/w3c/web-platform-tests) 而设计的 Web 服务端。
 
 ## [w3c/pywebsocket](https://github.com/w3c/pywebsocket)
 
+Google 的 WebSocket 服务端，它同时扩展了 Apache HTTP 服务端，意在支持 [w3c/web-platform-tests](https://github.com/w3c/web-platform-tests) 测试执行。
+
 ## [w3c/test-results](https://github.com/w3c/test-results)
+
+基于 [darobin/wptreport](https://github.com/darobin/wptreport) 的 [w3c/web-platform-tests](https://github.com/w3c/web-platform-tests) 测试执行结果报告。
+
+## [w3c/testtwf-website](https://github.com/w3c/testtwf-website)
+
+http://testthewebforward.org/ 网站的源代码。该网站提供了一站式开放网络平台测试领域资源，包括文档、博客和历次 TestTWF 活动介绍和安排，是 W3C Web 测试领域不可多得的资料库。推荐每一位进入该领域的同学先通读一边，进而有选择的实践之。
 
 ## [darobin/wptreport](https://github.com/darobin/wptreport)
 
+专为 [w3c/web-platform-tests](https://github.com/w3c/web-platform-tests) 测试执行结果而开发的报告生成器。
+
 ## [darobin/webidl2.js](https://github.com/darobin/webidl2.js)
+
+[Web IDL](http://heycam.github.io/webidl/) 解析器，可供 [idlharness.js](https://github.com/w3c/testharness.js/blob/master/idlharness.js) 使用。
 
 ## [KhronosGroup/WebGL](https://github.com/KhronosGroup/WebGL)
 
+WebGL 官方代码库，包括 [WebGL conformance suites](https://github.com/KhronosGroup/WebGL/tree/master/conformance-suites)。期待2015年在打扫 WebGL 测试案例时，能对此有所贡献。
+
 ## [KhronosGroup/WebCL-conformance](https://github.com/KhronosGroup/WebCL-conformance)
 
+WebCL conformance tests，期待2015年打扫 WebCL 测试案例时，能对此有所贡献。
 
 # HTML5 Chinese IG
 
