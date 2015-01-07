@@ -52,14 +52,23 @@ Web Testing Service (WTS) 意在搭建一套 Web 测试服务，使得测试和�
 
 ## [testkit/testkit-lite](https://github.com/testkit/testkit-lite)
 
+这是 Crosswalk Test Suite 和 Tizen Web TCT 推荐测试执行工具，一轻量级命令行工具。
+
 ## [testkit/testkit-stub](https://github.com/testkit/testkit-stub)
+
+该工具是配合宿主机端 testkit-lite 的部署在测试机端的桩。
 
 ## [testkit/tinyweb](https://github.com/testkit/tinyweb)
 
+顾名思义，是微小的 Web 服务器工具，部署在测试机端（被测设备）。
+
 ## [testkit/webrunner](https://github.com/testkit/webrunner)
+
+顾名思义，测试执行器。
 
 ## [GoogleChrome/samples](https://github.com/GoogleChrome/samples)
 
+Google Chrome 各发布版本所引入的新特性的示例代码；用于测试 Crosswalk 每6周一次的与 Chromium 代码同步后，这些新特性是否能在 Crosswalk 运行时环境使用。
 
 # Web Platform Tests
 
