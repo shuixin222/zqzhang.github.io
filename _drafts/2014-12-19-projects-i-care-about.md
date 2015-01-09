@@ -127,10 +127,15 @@ WebCL conformance tests，期待2015年打扫 WebCL 测试案例时，能对此�
 
 ## [w3c-html-ig-zh/w3c-glossary](https://github.com/w3c-html-ig-zh/w3c-glossary)
 
+无他，W3C 翻译词汇表是每一位欲翻译 W3C 规范的童鞋都该好好掌握的东西；如果发现任何问题，都请及时反馈。
+
 ## [w3c-html-ig-zh/about](https://github.com/w3c-html-ig-zh/about)
+
+这里字面意思是介绍 W3C HTML 中文兴趣小组整个代码库；但目前只有几个翻译须知和小技巧。
 
 ## [w3c-html-ig-zh/ES5](https://github.com/w3c-html-ig-zh/ES5)
 
+这是应 Kenny 大大的呼吁，我从 http://www.w3.org/html/ig/zh/wiki/ES5 搬过来的翻译稿，将之整理和校对。本来计划 2014 年做完的，但因种种原因，没有完成，真是很抱歉。希望今年上半年完成它，并着手 ES6 的翻译工作。
 
 # Popular Frameworks
 
