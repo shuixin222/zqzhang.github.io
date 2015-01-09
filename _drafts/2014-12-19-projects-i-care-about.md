@@ -141,25 +141,20 @@ WebCL conformance tests，期待2015年打扫 WebCL 测试案例时，能对此�
 
 ## [jquery/jquery](https://github.com/jquery/jquery)
 
-In IVI TCT, there are 4 versions of jQuery used, [jQuery v1.7](https://code.jquery.com/jquery-1.7.js), [v1.7.1](https://code.jquery.com/jquery-1.7.1.js), [v1.8.2](https://code.jquery.com/jquery-1.8.2.js) and [v1.10.2](https://code.jquery.com/jquery-1.10.2.js). Considering the [v1.11.1](https://code.jquery.com/jquery-1.11.2.js) to be used by bootstrap demo, and the latest [v1.x](https://code.jquery.com/jquery-1.11.2.js), we may have 6 versions of jQuery! This is a nightmare and disaster for the whole test suites and tools development and maintaining. We need to unify them using one of the versions, preferring the latest one. See more discussion at [issue #875](https://github.com/crosswalk-project/crosswalk-test-suite/issues/875#issuecomment-68036384).
-
-Moreover, I shall take a deep look at the source of of jQuery, even if for a better understanding and maintaining of our tests and tools.
+在 IVI TCT 的代码库中, 我们使用了4个版本的 jQuery： [jQuery v1.7](https://code.jquery.com/jquery-1.7.js), [v1.7.1](https://code.jquery.com/jquery-1.7.1.js), [v1.8.2](https://code.jquery.com/jquery-1.8.2.js) and [v1.10.2](https://code.jquery.com/jquery-1.10.2.js)。 考虑到将要基于 Bootstrap 来开发示例代码，会引入 [v1.11.1](https://code.jquery.com/jquery-1.11.2.js)，以及最新发布的 [v1.x](https://code.jquery.com/jquery-1.11.2.js)，我们很有可能引入6个版本的 jQuery！这实在是不能接受！不仅开发人员会迷惑，代码管理维护人员更是头大。我个人倾向于统一到最新版本，但需要证明它确实可行。更多的讨论见 [issue #875](https://github.com/crosswalk-project/crosswalk-test-suite/issues/875#issuecomment-68036384)。
 
 ## [jquery/jquery-mobile](https://github.com/jquery/jquery-mobile)
 
-Tizen TCT Behavior Test tool leverages the [jquery.mobile.js](https://github.com/crosswalk-project/crosswalk-test-suite/blob/master/behavior/js/thirdparty/jquery.mobile.js) as its UI Framework. So I need to go through the source code and to check what we have used. And then compare it with the bootstrap framework to see why some guys want to replace it with bootstrap.
+Tizen TCT Behavior Test tool 将 [jquery.mobile.js](https://github.com/crosswalk-project/crosswalk-test-suite/blob/master/behavior/js/thirdparty/jquery.mobile.js) 作为其用户界面框架。目前有同事欲将其替换为 [Bootstrap](https://github.com/twbs/bootstrap)。还未深入了解就要被废弃，但无论如何也要清楚它为什么会被替换。
 
 ## [twbs/bootstrap](https://github.com/twbs/bootstrap)
 
-I used this framework for this home page and my blog posts, with reference to the http://testthewebforward.org/; therefore, I need to learn more about it to make full use of it.
-
-Moreover, one of my colleagues is working on the Behavior tool using this framework to get a better UI.
+Bootstrap 近来很火，我也加了一把材。参考 http://testthewebforward.org/，我搭建了这个博客和分享系统。同时，项目将采取其可以开源的部件，重写手动测试；所以，需要更加深入了解之。
 
 ## [hakimel/reveal.js](https://github.com/hakimel/reveal.js)
 
-I have used this HTML Presentation Framework for several talks and like it. However, I haven't dived into the source code to customize my own theme and template. It is time to do it for my talks posted here.
+自从进入 Web 领域，我就被教导要热情洋溢地使用 Web 技术，包括演讲稿。几经调研和对比，选择使用这个 reveal.js；用过好多次，感觉很不错。后续需要定制自己的模板。
 
 ## [w3c/respec](https://github.com/w3c/respec)
 
-Most W3C technical reports (aka spec) are created based on this JS library, specification edition support tool. If you want to be a spec editor, it is worthy of reading through the source code.
-
+搞 W3C 技术规范，离不开这个工具；如果想编辑规范，更是要使用好这个工具才行；否则会给大家带来不便。
