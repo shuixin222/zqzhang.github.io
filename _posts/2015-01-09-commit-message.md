@@ -68,5 +68,7 @@ Unit test result summary: pass 205, fail 0, block 0
   * update version for each release, and
   * improve packaging scripts, such as inst.sh.*, pack.sh, *.spec.
 
+多说一些，如果觉得第一行 50 个字符不能表达完整这个提交所包含的内容，最好重新思考这个代码提交是否包含了过多的内容，比如增删改一起上，这时，分拆提交是最明智的做法。退而求其次，总结出最主要的变更，然后把其他相关的改动写在空行后面；这样，不会显得杂乱无章或者主次不分。
+
 我天真的以为，有了这些，应该可以高真无忧了。奈何，人家就是不看，或者视而不见。你呢？
 
