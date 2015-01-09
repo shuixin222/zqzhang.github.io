@@ -26,9 +26,9 @@ title: Commit Message 这事儿为啥那么重要
 2. 将 `autocmd Filetype gitcommit setlocal spell textwidth=72` 添加到 `~/.vimrc` 配置文件中，它能帮你检查拼写并自动换行。
 3. 绝不要使用 `git commit -m <msg>` 或者 `git commit --message=<msg>` ！ 它们会把你带到阴沟里去。
 4. 拷问自己这些问题（在提交信息里回答它们）：
-  1. 为啥必须要做这个改动？（Why is this change necessary?）
-  2. 这个改动解决了啥问题？（How does it address the issue?）
-  3. 这个改动带来啥副作用？（What side effects does this change have?）
+  * 为啥必须要做这个改动？（Why is this change necessary?）
+  * 这个改动解决了啥问题？（How does it address the issue?）
+  * 这个改动带来啥副作用？（What side effects does this change have?）
 5. 在提交信息里提供任何有助于改动被接受的链接，比如缺陷报告、讨论、背景等等。全链接比简略标识更有用。
 
 有个偷懒的学习法子，直接查看评审人员之前写的代码提交！没错，就是投其所好，让其愉快地阅读和接受你的代码提交。我在给 W3C 提交测试案例过程中，就偷师学艺过：Gérard Talbot、Simon Pieters、James Graham、Ms2ger、Odin Hørthe Omdal 等等。比如你可以使用 `git log --oneline --author zqzhang --since "Jan 1 2014"` 查看我自2014年以来的代码提交。（插一句，刚在 https://github.com/w3c/web-platform-tests 上查了一下，才发现去年只有一个真正的代码提交，其他的都是评审和介绍社区里的代码提交；要提交代码哦。）
@@ -39,7 +39,7 @@ title: Commit Message 这事儿为啥那么重要
 
 三年来做开源项目，多是和 git 打交道；项目多是靠 GitHub 和 Gerrit 托管，没有理由不看看它们是怎么做的。Gerrit 有篇 [《提交信息指南》](http://www.mediawiki.org/wiki/Gerrit/Commit_message_guidelines)，值得认真阅读。参考 Tim Pope 的 [Note About Git Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)，综合项目需求，形成了这样的模板：
 
-```
+~~~
 Capitalized, short (50 chars or less) summary
 
 More detailed explanatory text, if necessary.  Wrap it to about 72
@@ -50,9 +50,9 @@ the body entirely); tools like rebase can get confused if you run the
 two together.
 
 Impacted tests: new 0, update 5, delete 0
-Unit test platform: Tizen Wearable <version>
+Unit test platform: Tizen Wearable version
 Unit test result summary: pass 205, fail 0, block 0
-```
+~~~
 
 并且做了这样的限制或者说规则：
 
@@ -65,8 +65,8 @@ Unit test result summary: pass 205, fail 0, block 0
   * Use a hanging indent.
 * Next comes unit test result if there is test case logic update or add.
 * Note that a patch submission should not cross test suites with only two exceptions that
-  * (1) update version for each release, and
-  * (2) improve packaging scripts, such as inst.sh.*, pack.sh, *.spec.
+  * update version for each release, and
+  * improve packaging scripts, such as inst.sh.*, pack.sh, *.spec.
 
 我天真的以为，有了这些，应该可以高真无忧了。奈何，人家就是不看，或者视而不见。你呢？
 
