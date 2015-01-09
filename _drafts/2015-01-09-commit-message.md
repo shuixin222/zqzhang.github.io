@@ -1,0 +1,40 @@
+---
+layout: post
+type: post
+title: Commit Message 这事儿为啥那么重要
+---
+
+最近，被很多小白代码提交郁闷了！最郁闷的莫过于看到很多恶心的 Commit Message，甚至非常随意，连 `aaaa` 都上来了。这让我很受伤。
+
+我个人非常看重 Commit Message，再好的代码修改，如果提交信息很恶心，我都懒得看。
+
+# 为什么呢？
+
+我个人认为 Commit Message 首先是开发人员和评审人员之间的交流。交流非常重要，这无需我多言。代码提交，无非就是代码的增、删、改，不管你做了哪个方面的改动，都需要在提交的过程中，简明额要地告诉大家，你做了哪些改动，为什么做这些改动；要让别人接受你的改动，就需要拿出十二分的诚意，来推销这些个改动；这就是 Commit Message 所承担的责任。从这个意义上讲，尤其是对新人来说， Commit Message 就好似你的自荐信！
+
+一旦一个 Commit 被接受，它就是项目的一部分了，就需要维护，甚至是二次开发。那么后来人就会查历史，查这些代码都是怎么来的，为啥那么改动，等等。除非你的代码非常牛逼，不需要任何人包括你自己，花时间和精力来维护；或者说，你这个代码让人一看就明白；否则都会遇到这个问题。为免受他人骂娘（在此给 `git blame` 点个赞），你都该认真对待 Commit Message。
+
+退一步讲，如果你的代码提交一时没有被接受，后续比如说6个月后，你想重新更改再提交。这个 Commit Message 就是你和自己的对话交流了。如果它是 `aaaa`，你都可能要跳起来骂自己了，为啥 TMD 当时没有写清楚为啥做这事呀？！至少，你要花一些功夫，重新阅读改动，来着手改进；除非你的记忆力惊人，记住了这6个月前的鸡毛。
+
+# 怎么做呢？
+
+无他，积极学习、多多练习。
+
+学习，不是盲目地。参与一个项目，不管是因为工作被逼的，还是因为兴趣乐呵的，你都要从这个项目的要求着手；比如在[《我所关注的项目》](/blog/2014/12/19/projects-i-care-about.html)里，jQuery 就有一份[《提交指南》](http://contribute.jquery.org/commits-and-pull-requests/#commit-guidelines)，如果你给 jQuery 提交改动而不遵守它，我想会被大家鄙视的。如果这个项目没有要求，通常来讲，要遵守一些常识性的东东；比如 http://git-scm.com 给出的 [为项目作贡献#提交指南](http://git-scm.com/book/zh/v1/%E5%88%86%E5%B8%83%E5%BC%8F-Git-%E4%B8%BA%E9%A1%B9%E7%9B%AE%E4%BD%9C%E8%B4%A1%E7%8C%AE#%E6%8F%90%E4%BA%A4%E6%8C%87%E5%8D%97)；再比如 Google 搜索 commit message 得到第一篇文章[5 Useful Tips For A Better Commit Message](http://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message)，摘录要点如下：
+
+1. 第一行应始终保持在 50 字符以内；紧接着第一行的是一空行。`vim` 有一适用工具来帮你做语法、缩进和文件文件类型检查。
+2. 将 `autocmd Filetype gitcommit setlocal spell textwidth=72` 添加到 `~/.vimrc` 配置文件中，它能帮你检查拼写并自动换行。
+3. 绝不要使用 `git commit -m <msg>` 或者 `git commit --message=<msg>` ！ 它们会把你带到阴沟里去。
+4. 拷问自己这些问题（在提交信息里回答它们）：
+  1. 为啥必须要做这个改动？（Why is this change necessary?）
+  2. 这个改动解决了啥问题？（How does it address the issue?）
+  3. 这个改动带来啥副作用？（What side effects does this change have?）
+5. 在提交信息里提供任何有助于改动被接受的链接，比如缺陷报告、讨论、背景等等。全链接比简略标识更有用。
+
+有个偷懒的学习法子，直接查看评审人员之前写的代码提交！没错，就是投其所好，让其愉快地阅读和接受你的代码提交。我在给 W3C 提交测试案例过程中，就偷师学艺过：Gérard Talbot、Simon Pieters、James Graham、Ms2ger、Odin Hørthe Omdal 等等。比如你可以使用 `git log --oneline --author zqzhang --since "Jan 1 2014"` 查看我自2014年以来的代码提交。（插一句，刚在 https://github.com/w3c/web-platform-tests 上查了一下，才发现去年只有一个真正的代码提交，其他的都是评审和介绍社区里的代码提交；要提交代码哦。）
+
+想想看，连大名鼎鼎的 Linus Torvalds 都[特别强调优秀的提交信息](https://github.com/torvalds/linux/pull/17#issuecomment-5659933)，我们有啥理由不认真对待呢。[书写优秀的提交信息](https://github.com/erlang/otp/wiki/Writing-good-commit-messages)吧，多多练习，会受益无穷的。
+
+# 实战练习！
+
+三年来做开源项目，多是和 git 打交道；项目多是靠 GitHub 和 Gerrit 托管，没有理由不看看它们是怎么做的。
