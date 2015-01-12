@@ -72,3 +72,15 @@ Unit test result summary: pass 205, fail 0, block 0
 
 我曾天真的以为，有了这些，应该可以高真无忧了。奈何，很多人就是不看，或者视而不见。你呢？
 
+# 要点回顾。
+
+摘录[书写优秀的提交信息](https://github.com/erlang/otp/wiki/Writing-good-commit-messages)中的关于卓越提交信息的7条规则作为要点回顾：
+
+1. Separate subject from body with a blank line
+2. Limit the subject line to 50 characters
+3. Capitalize the subject line
+4. Do not end the subject line with a period
+5. Use the imperative mood in the subject line
+6. Wrap the body at 72 characters
+7. Use the body to explain what and why vs. how
+
