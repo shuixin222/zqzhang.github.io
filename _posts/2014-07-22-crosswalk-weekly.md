@@ -18,7 +18,7 @@ Crosswalk Weekly is a summary of activity on the Crosswalk Community from QA's p
 
 * [crosswalk-help](https://lists.crosswalk-project.org/mailman/listinfo/crosswalk-help) mailing list is intended for application developers who want to use Crosswalk as a web application runtime.
 * [crosswalk-dev](https://lists.crosswalk-project.org/mailman/listinfo/crosswalk-dev) mailing list is for developers working on the Crosswalk core.
-* In [Stack overflow](http://stackoverflow.com/search?tab=newest&q=crosswalk), search “crosswalk” as keywords and select “Newest” tab to get latest topics about Crosswalk.
+* [Stack overflow](http://stackoverflow.com/questions/tagged/crosswalk-runtime) with “crosswalk-runtime” tagged questions.
 * There is a single topic of [Crosswalk Intel XDK experiences](https://www.scirra.com/forum/crosswalk-intel-xdk-experiences_t101139?&start=210) in HTML5 Game Creator Construct 2forum with more than 200 floors.
 * There will be a Cordova 4.0 mailing list of Crosswalk later.
 * There is [a filter of JIRA bugs not from QA with update in past 7 days](https://crosswalk-project.org/jira/issues/?filter=11404).
