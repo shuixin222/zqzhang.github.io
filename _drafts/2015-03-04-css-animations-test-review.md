@@ -13,6 +13,8 @@ title: 审阅 CSS Animations 测试案例
 * [Crosswalk 测试套件里为何保有内部测试案例](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/webapi/tct-animations-css3-tests/animations)，是否可以提交给 CSS 工作组？
 * [CSS Animations 规范](http://dev.w3.org/csswg/css-animations-1/)还有哪些部分没有测试到，即可测试规范空白？
 
+遗憾的是谢云霄因家庭原因离开了项目组，感谢他的同时，这篇文章还意在帮助新来的同学尽快地融入项目，进而改进这些测试案例，完善 CSS 动画测试套件。
+
 ## 谢云霄提交的测试案例
 
 | Pull Request | Animation Property Name | Animation Property Value | Applies to |
@@ -87,6 +89,56 @@ Animation 的相关属性并没有直接应用到 `::after` 伪元素上，而�
 * 选择器 `#content` 没有对应的元素，属于未引用（unreferenced）代码，**应删除**。
 * `Test passes if the '::after' doesn't move.` 这一测试结果判决条件，能让那些根本没有实现动画属性的用户代理得到 PASS 结果！是不可取的。所以要**改进测试案例，避免这样的结果**。
 * `<title>CSS3 Animations Test` 中不应出现 3 这样的规范级别号；CSS 测试案例通常能被多个级别的规范使用，所以在标题中要避免使用级别号；可以使用 `<title>CSS Tests : CSS Animations :` （像目前的动画测试案例一样），或者使用 `<title>CSS Animations Test:`，个人倾向后一种。即 **删除 `<title>` 中的级别号，包括现有测试案例**。
+* 可添加 `<meta name="flags" content="animated">`，[标识该测试案例不能使用参考测试或者截屏方式](http://testthewebforward.org/docs/css-metadata.html#requirement-flags)。
 
 ## 工作组现有测试案例
+
+[CSS 工作组目前有 32 个测试文件](http://test.csswg.org/source/css-animations-1/)；然而[规范中说有 19 个测试案例](http://dev.w3.org/csswg/css-animations/)；[工作组运行的结果有 47 个测试案例](http://test.csswg.org/harness/results/css-animations-1_dev/grouped/)。这其中定有统计接口不一致的地方，但它不是本节讨论的重点。本节主要关注这 32 个测试文件有哪些可以改进的地方。
+
+首先，[http://test.csswg.org/source/css-animations-1/](http://test.csswg.org/source/css-animations-1/) 所显示的 `Description` 来源于测试文件中 `<title>` 的内容，但需要遵从 `[Test Area]: [Title/Scope of Test]` 这样的[格式](http://testthewebforward.org/docs/css-metadata.html#title-element)。**这便是可以改进的地方之一**。
+
+其他可以优化的部分，我观测下来主要包括：
+
+* 部分测试案例使用制表符（tab）缩进，**可统一为空格缩进**；**行尾的空白字符（tab、space、etc.）均可删除**。
+* **可将 `CSS3 Testing Content` 统一为 `Filler Text`**，同时，**可统一动画框，尽可能少地设置 CSS 属性**，比如 `padding`、`margin` 等。
+* **去除 `FAIL` 结果判据**，非 `PASS` 结果即推定为 FAIL；因为可能出现既非目前的 PASS 也非 FAIL 的情况。
+* **测试文件中的规范链接，可统一至最新规范，并进行必要的修订**。
+* **可删除注释掉的代码段**。
+* `NO movement/animation` 作为测试结果判据，会导致没有实现动画属性的用户代理得到 PASS 结果，应改进；比如 [animation-iteration-count-006.xht](http://test.csswg.org/source/css-animations-1/animation-iteration-count-006.xht)。
+* `AnimationEvent.pseudoElement` 被认定为 At risk 特性，关于它的测试案例，没必要再增加。
+
+## Crosswalk 现有测试案例
+
+[Crosswalk 测试套件里保有的内部测试案例](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/webapi/tct-animations-css3-tests/animations)，如果不能提交给 CSS 工作组，就可以删除了；请新来的同学逐个分析。
+
+## 深入理解动画规范
+
+要完全理解 [CSS 动画规范](http://dev.w3.org/csswg/css-animations-1/)，一方面要通读规范本身，编写相应的测试案例或者演示示例；另一方面，要对该规范所引用的规范内容，进行必要的研读。
+
+### 动画规范测试空白
+
+[规范第2部分](http://dev.w3.org/csswg/css-animations/#values)的 `initial` 和 `inherit` 关键字，目前没有测试案例。
+
+> In addition to the property-specific values listed in their definitions, all properties defined in this specification also accept the `initial` and `inherit` keyword as their property value.
+
+[规范第3部分](http://dev.w3.org/csswg/css-animations/#animations)关于 `display` 属性对动画的影响，也没有得到检验。
+
+> Setting the `display` property to `none` will terminate any running animation applied to the element and its descendants. If an element has a `display` of `none`, updating `display` to a value other than `none` will start all animations applied to the element by the `animation-name` property, as well as all animations applied to descendants with display `other` than `none`. 
+
+[规范第4.1部分](http://dev.w3.org/csswg/css-animations/#timing-functions)，没有得到充分的测试。比如可以将示例4改编为测试案例，测试下面两个测试点：
+
+> A keyframe style rule may also declare the timing function.
+
+> A timing function specified on the to or 100% keyframe is ignored.
+
+[规范第5部分](http://dev.w3.org/csswg/css-animations/#events)，可以构造一些基于 `testharness.js` 的测试案例，来测试这些事件构造、事件本身及其属性。参考 [DeviceLightEvent](https://github.com/w3c/web-platform-tests/blob/master/ambient-light/DeviceLightEvent_tests.js)，当然可以不需要那么多。这其中，可以探索是否可以通过构建 JS 事件 `animationstart`、`animationend`、`animationiteration` 来模拟 CSS 动画效果。
+
+## 研读引用文档相关内容
+
+若要完全理解 CSS 动画规范，得了解它所引用的相关规范内容：
+
+* [CSS3 Transition](http://www.w3.org/TR/css3-transitions/): 这是动画规范来源的基础。
+* [CSS2.1](http://www.w3.org/TR/2011/REC-CSS2-20110607): CSS 属性和值以及盒模型定义的基础。
+* [CSS3 Values and Units Module](http://www.w3.org/TR/2013/CR-css3-values-20130730/): CSS 关于值和单位的定义。
+* [CSS3 Cascading and Inheritance](http://www.w3.org/TR/2013/CR-css-cascade-3-20131003/): CSS 关于级联和继承的定义。
 
