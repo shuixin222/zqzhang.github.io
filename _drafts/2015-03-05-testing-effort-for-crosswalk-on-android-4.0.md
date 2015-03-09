@@ -37,8 +37,8 @@ From the [Android Test Instructions](https://code.google.com/p/chromium/wiki/And
 
 Per the [overview dashboard in the test result server](http://test-results.appspot.com/dashboards/overview.html), we can get the total count of the tests.
 
-| Tests | Total Count | Time Consume |
-| :---- | :---------- | :----------- |
+| Tests | Total Count | Automation Rate | Applicable to Crosswalk | Time Consume |
+| :---- | :---------- | :-------------- | ----------------------- | ------------ |
 | Gtests (content_unittests) | 3263 |
 | Instrumentation Tests (ContentShellTest) | 403 |
 | Instrumentation Tests (ChromeShellTest) | 345 |
