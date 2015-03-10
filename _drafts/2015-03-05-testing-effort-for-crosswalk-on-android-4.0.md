@@ -37,21 +37,27 @@ From the [Android Test Instructions](https://code.google.com/p/chromium/wiki/And
 
 Per the [overview dashboard in the test result server](http://test-results.appspot.com/dashboards/overview.html#showNoFlakes=true), we can get the total count of the tests.
 
-| Test Type | Flaky Count | Total Count | Automation Rate | Applicable to Crosswalk |
-| :-------- | :---------- | :---------- | :-------------- | :---------------------- |
-| Gtests (content_unittests) | 3 | 3263 |
-| Instrumentation Tests (ContentShellTest) | 1 | 403 |
-| Instrumentation Tests (ChromeShellTest) | 31 | 357 |
-| Instrumentation Tests (AndroidWebViewTest) | 3 | 428 |
-| Blink Layout Tests (layout-tests) | 3774 | 42485 |
-| GPU Tests (context_lost) | 5 | 6 |
-| GPU Tests (memory_test) | 1 | 1 |
-| GPU Tests (webgl_conformance) | 7 | 679 |
-| GPU Tests (maps) | 1 | 1 |
-| GPU Tests (angle_unittests) | 0 | 4832 |
-| GPU Tests (content_gl_tests) | 0 | 19 |
-| GPU Tests (gl_tests) | 0 | 94 |
-| GPU Tests (gles2_conform_test) | 0 | 143 |
+| Test Type | Flaky Count | Total Count | Applicable to Crosswalk |
+| :-------- | :---------- | :---------- | :---------------------- |
+| Gtests (content_unittests) | 3 | 3263 | Yes |
+| Instrumentation Tests (ContentShellTest) | 1 | 403 | Yes |
+| Instrumentation Tests (ChromeShellTest) | 31 | 357 | No |
+| Instrumentation Tests (AndroidWebViewTest) | 3 | 428 | No |
+| Blink Layout Tests (layout-tests) | 3774 | 42485 | Yes |
+| GPU Tests (context_lost) | 5 | 6 | Yes |
+| GPU Tests (memory_test) | 1 | 1 | Yes |
+| GPU Tests (webgl_conformance) | 7 | 679 | Yes |
+| GPU Tests (maps) | 1 | 1 | Yes |
+| GPU Tests (angle_unittests) | 0 | 4832 | Yes |
+| GPU Tests (content_gl_tests) | 0 | 19 | Yes |
+| GPU Tests (gl_tests) | 0 | 94 | Yes |
+| GPU Tests (gles2_conform_test) | 0 | 143 | Yes |
 
-**Note**: Tests that fail due to a bad patch being committed are counted as **flaky**.
+**Note**:
+
+* All these tests are automated since they are running on Chromium Try Build server.
+* Tests that fail due to a bad patch being committed are counted as **flaky**.
+* The 'Applicable to Crosswalk' info above has been confirmed with Ningxin Hu and Lin Sun.
+* Crosswalk Try Build server has enabled some Intel created Instrumentation tests.
+
 
