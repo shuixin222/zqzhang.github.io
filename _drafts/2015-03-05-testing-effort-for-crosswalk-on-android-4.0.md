@@ -10,13 +10,13 @@ Because Google is [freezing Chrome for Ice Cream Sandwich](http://blog.chromium.
 
 Copy the reason of this change from Chromium blog post here:
 
-> In the last year, we’ve seen the number of Chrome users running ICS drop by thirty percent. Developing new features on older phones has become increasingly challenging, and supporting ICS takes time away from building new experiences on the devices owned by the vast majority of our users. So, with Chrome’s 42nd release, we’ll stop updating Chrome on ICS devices. After Chrome 42, users on ICS devices can continue to use Chrome but won’t get further updates.
+> In the last year, we've seen the number of Chrome users running ICS drop by thirty percent. Developing new features on older phones has become increasingly challenging, and supporting ICS takes time away from building new experiences on the devices owned by the vast majority of our users. So, with Chrome's 42nd release, we'll stop updating Chrome on ICS devices. After Chrome 42, users on ICS devices can continue to use Chrome but won't get further updates.
 
 ## Questions
 
 As Crosswalk Web QA, I was asked a question as:
 
-> If Google doesn’t run upstream tests on 4.0 we should do it ourselves, and we should make sure 4.0 is part of the weekly test. Is that feasible and at what cost?
+> If Google doesn't run upstream tests on 4.0 we should do it ourselves, and we should make sure 4.0 is part of the weekly test. Is that feasible and at what cost?
 
 Some intuitive testing efforts might be:
 
@@ -35,20 +35,23 @@ From the [Android Test Instructions](https://code.google.com/p/chromium/wiki/And
 * Blink Layout Tests: to verify the correctness of Chrome's graphically accelerated rendering pipeline.
 * GPU Tests: to check the correctness of the renderer.
 
-Per the [overview dashboard in the test result server](http://test-results.appspot.com/dashboards/overview.html), we can get the total count of the tests.
+Per the [overview dashboard in the test result server](http://test-results.appspot.com/dashboards/overview.html#showNoFlakes=true), we can get the total count of the tests.
 
-| Tests | Total Count | Automation Rate | Applicable to Crosswalk | Time Consume |
-| :---- | :---------- | :-------------- | ----------------------- | ------------ |
-| Gtests (content_unittests) | 3263 |
-| Instrumentation Tests (ContentShellTest) | 403 |
-| Instrumentation Tests (ChromeShellTest) | 345 |
-| Instrumentation Tests (AndroidWebViewTest) | 23? |
-| Blink Layout Tests (layout-tests) | 42479 |
-| GPU Tests (context_lost) | 6 |
-| GPU Tests (memory_test) | 1 |
-| GPU Tests (webgl_conformance) | 679 |
-| GPU Tests (maps) | 1? |
-| GPU Tests (angle_unittests) | 48 |
-| GPU Tests (content_gl_tests) | 19 |
-| GPU Tests (gl_tests) | 94 |
-| GPU Tests (gles2_conform_test) | 143 |
+| Test Type | Flaky Count | Total Count | Automation Rate | Applicable to Crosswalk |
+| :-------- | :---------- | :---------- | :-------------- | :---------------------- |
+| Gtests (content_unittests) | 3 | 3263 |
+| Instrumentation Tests (ContentShellTest) | 1 | 403 |
+| Instrumentation Tests (ChromeShellTest) | 31 | 357 |
+| Instrumentation Tests (AndroidWebViewTest) | 3 | 428 |
+| Blink Layout Tests (layout-tests) | 3774 | 42485 |
+| GPU Tests (context_lost) | 5 | 6 |
+| GPU Tests (memory_test) | 1 | 1 |
+| GPU Tests (webgl_conformance) | 7 | 679 |
+| GPU Tests (maps) | 1 | 1 |
+| GPU Tests (angle_unittests) | 0 | 4832 |
+| GPU Tests (content_gl_tests) | 0 | 19 |
+| GPU Tests (gl_tests) | 0 | 94 |
+| GPU Tests (gles2_conform_test) | 0 | 143 |
+
+**Note**: Tests that fail due to a bad patch being committed are counted as **flaky**.
+
