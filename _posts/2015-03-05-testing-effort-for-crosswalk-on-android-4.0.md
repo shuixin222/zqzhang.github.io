@@ -35,7 +35,7 @@ From the [Android Test Instructions](https://code.google.com/p/chromium/wiki/And
 * Blink Layout Tests: to verify the correctness of Chrome's graphically accelerated rendering pipeline.
 * GPU Tests: to check the correctness of the renderer.
 
-Per the [overview dashboard in the test result server](http://test-results.appspot.com/dashboards/overview.html#showNoFlakes=true), we can get the total count of the tests.
+Per the [overview dashboard in the test result server](http://test-results.appspot.com/dashboards/overview.html#showNoFlakes=true), we can get the flaky and total count of the tests.
 
 | Test Type | Flaky Count | Total Count | Applicable to Crosswalk |
 | :-------- | :---------- | :---------- | :---------------------- |
