@@ -136,3 +136,13 @@ LayoutTests/fast/forms/*
 LayoutTests/compositing/rendering-contexts.html
 ~~~
 
+## Chromium Unit Tests
+
+~~~
+chromium-crosswalk/base/base_unittests.isolate
+chromium-crosswalk/content/content_unittests.isolate
+chromium-crosswalk/net/net_unittests.isolate
+chromium-crosswalk/ui/base/ui_base_unittests.isolate
+chromium-crosswalk/ui/gfx/gfx_unittests.isolate
+~~~
+
