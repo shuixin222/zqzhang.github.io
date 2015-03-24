@@ -128,6 +128,8 @@ ui/gfx/text_elider.cc
 
 ## Blink Layout Tests
 
+Luckily, there are some layout tests for the blink-crosswalk changes:
+
 ~~~
 LayoutTests/editing/*
 LayoutTests/fonts/*
@@ -136,13 +138,30 @@ LayoutTests/fast/forms/*
 LayoutTests/compositing/rendering-contexts.html
 ~~~
 
+We can leverage them for the ICU replacement changes.
+
 ## Chromium Unit Tests
 
+There are also some unit tests for the chromium-crosswalk changes:
+
 ~~~
+blink-crosswalk/Source/web/tests/LocaleICUTest.cpp
+
 chromium-crosswalk/base/base_unittests.isolate
 chromium-crosswalk/content/content_unittests.isolate
 chromium-crosswalk/net/net_unittests.isolate
 chromium-crosswalk/ui/base/ui_base_unittests.isolate
 chromium-crosswalk/ui/gfx/gfx_unittests.isolate
 ~~~
+
+However, I am not sure whether Web QA can leverage these unit tests in regular testing cycles.
+
+## ICU Integration Tests
+
+There are some [integration tests](http://site.icu-project.org/processes/release/tasks/integration) for ICU4J:
+
+- ICU4J Locale Service Provider tests
+- ICU4J Test cases with JDK TimeZone
+
+However, these tests are not suitable for the ICU replacement here.
 
