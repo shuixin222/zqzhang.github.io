@@ -48,6 +48,10 @@ title: 待解决的几个问题
 
 > 讲讲输入完网址按下回车，到看到网页这个过程中发生了什么。
 
+* [答寒冬九问之讲讲输入完网址按下回车，到看到网页这个过程中发生了什么。](http://www.cnblogs.com/dojo-lzz/p/3983335.html)
+* [What really happens when you navigate to a URL](http://igoro.com/archive/what-really-happens-when-you-navigate-to-a-url/)
+* [译文：当你输入一个网址的时候，实际会发生什么?](http://www.cnblogs.com/wenanry/archive/2010/02/25/1673368.html)
+
 > 谈谈你对Web前端组件化的理解，Web Component会带来怎样的影响
 
 > 谈谈你对前端资源下载性能优化的经验和思考
