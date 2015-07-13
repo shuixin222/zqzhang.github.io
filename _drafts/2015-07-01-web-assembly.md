@@ -6,6 +6,10 @@ title: Web Assembly
 
 > Web 应用程序较于原生应用之短在于性能。当然性能的问题不在于比较跑分高下，而在于用户体验。试想象一下，浏览器直接执行的游戏引擎代码是优化过的二进制中间表达形式（IR），甚至可能是缓存下来的后端转换过的机器码。
 
+> [谷歌等巨头拟推全新网络应用标准WebAssembly](http://tech.163.com/15/0621/15/ASL5P1JJ000915BF.html)，旨在提高编译后Web应用程序的性能。
+
+> [Google/微软/苹果联手：浏览器提速20倍！](http://news.mydrivers.com/1/435/435294.htm) WebAssembly是一种可用于未来浏览器中的字节码(bytecode)，可使浏览器性能提升20倍。字节码是一种机器可读的指令集，与高级语言相比，字节码的加载速度更快。WebAssembly项目旨在开发全新的字节码，从而让桌面和移动端浏览器变得更高效。
+
 
 # W3C WebAssembly Community Group
 
