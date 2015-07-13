@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: Web WebAssembly
+title: Web Assembly
 ---
 
 # W3C WebAssembly Community Group
@@ -29,3 +29,7 @@ Note:
 
 
 # WebAssembly Design Documents
+
+1. AstSemantics: Abstract Syntax Tree Semantics: types, linear memory, local/global variables, control flow structures, calls, literals, expressions with control flow, 32/64-bit integer operations, floating point operations; datatype conversions, truncations, reinterpretations, promotions, and demotions.
+2. BinaryEncoding: portable binary encoding of the Abstract Syntax Tree nodes, designed to allow fast startup, which includes reducing download size and allow for quick decoding.
+3. CAndC++: Guide for C/C++ developers.
