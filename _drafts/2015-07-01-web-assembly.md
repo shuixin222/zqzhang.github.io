@@ -4,6 +4,9 @@ type: post
 title: Web Assembly
 ---
 
+> Web 应用程序较于原生应用之短在于性能。当然性能的问题不在于比较跑分高下，而在于用户体验。试想象一下，浏览器直接执行的游戏引擎代码是优化过的二进制中间表达形式（IR），甚至可能是缓存下来的后端转换过的机器码。
+
+
 # W3C WebAssembly Community Group
 
 * https://www.w3.org/community/webassembly/
