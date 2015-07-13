@@ -19,9 +19,13 @@ title: Web WebAssembly
 * [design](https://github.com/WebAssembly/design): WebAssembly Design Documents.
 * [experimental](https://github.com/WebAssembly/experimental): Loosely-coupled collection of quick-and-dirty experiments.
 * [interpreter-prototype](https://github.com/WebAssembly/interpreter-prototype): A very early experimental prototype WebAssembly interpreter.
-* [js-astcompressor-prototype](https://github.com/WebAssembly/js-astcompressor-prototype): Research prototype for investigating binary AST representation approaches. Experimenting to find the best balance of post-compression size, pre-compression size, complexity, and decode speed.
+* [js-astcompressor-prototype](https://github.com/WebAssembly/js-astcompressor-prototype): Research prototype for investigating binary AST representation approaches.
 * [polyfill-prototype-1](https://github.com/WebAssembly/polyfill-prototype-1): Experimental WebAssembly polyfill library and tools.
 * [v8-native-prototype](https://github.com/WebAssembly/v8-native-prototype): Prototype native decoder that targets TurboFan.
+
+Note:
+* AST is an abbreviation of [abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree). This research prototype is experimenting to find the best balance of post-compression size, pre-compression size, complexity, and decode speed.
+* [TurboFan](http://ariya.ofilabs.com/2014/08/javascript-and-v8-turbofan.html) is a codename of a new, experimental optimizing compiler for Google’s V8 JavaScript engine.
 
 
 # WebAssembly Design Documents
