@@ -16,7 +16,7 @@ title: Web Assembly
 * [https://www.w3.org/community/webassembly/](https://www.w3.org/community/webassembly/)
 * The mission of this group is to promote early-stage cross-browser collaboration on a new, portable, size- and load-time-efficient format suitable for compilation to the web.
 * Chairs: Luke Wagner (Mozilla), Jean-Francois Bastien (Google), BRHAM GIRI ABHIJITH CHATRA (Microsoft).
-* Non-Chair participants: 317 as of 20150701; .
+* Non-Chair participants: 317 as of 20150701; 357 as of 20150713.
 * Mailing lists: [public-webassembly](https://lists.w3.org/Archives/Public/public-webassembly/), [public-webassembly-contrib](https://lists.w3.org/Archives/Public/public-webassembly-contrib/), [internal-webassembly](https://lists.w3.org/Archives/Member/internal-webassembly/).
 * IRC: `irc://irc.w3.org:6667/#webassembly`.
 
