@@ -13,7 +13,7 @@ title: Web Assembly
 
 # W3C WebAssembly Community Group
 
-* https://www.w3.org/community/webassembly/
+* [https://www.w3.org/community/webassembly/](https://www.w3.org/community/webassembly/)
 * The mission of this group is to promote early-stage cross-browser collaboration on a new, portable, size- and load-time-efficient format suitable for compilation to the web.
 * Chairs: Luke Wagner (Mozilla), Jean-Francois Bastien (Google), BRHAM GIRI ABHIJITH CHATRA (Microsoft).
 * Non-Chair participants: 317 as of 20150701; .
@@ -39,30 +39,35 @@ Note:
 
 # WebAssembly Design Documents
 
-1. AstSemantics: Abstract Syntax Tree Semantics: types, linear memory, local/global variables, control flow structures, calls, literals, expressions with control flow, 32/64-bit integer operations, floating point operations; datatype conversions, truncations, reinterpretations, promotions, and demotions.
-2. BinaryEncoding: portable binary encoding of the Abstract Syntax Tree nodes, designed to allow fast startup, which includes reducing download size and allow for quick decoding.
-3. CAndC++: Guide for C/C++ developers.
-4. CodeOfConduct: Code of Ethics and Professional Conduct.
-5. Contributing: Contributing to WebAssembly.
-6. FAQ
-7. FeatureTest: Any feature not present in the MVP (Minimum Viable Product) will have a corresponding feature test.
-8. FutureFeatures: Feature to add after the MVP.
-9. HighLevelGoals:
-  1. Define a portable, size- and load-time-efficient binary format;
-  2. Specify and implement incrementally;
-  3. Design to execute within and integrate well with the existing Web platform;
-  4. Design to support non-browser embeddings as well;
-  5. Make a great platform.
-10. MVP: Minimum Viable Product. The MVP will contain features which are available today in modern web browsers and which perform well even on mobile devices, which leads to roughly the same functionality as asm.js.
-11. NonWeb: Non-Browser Embeddings, mainly node.js.
-12. Nondeterminism: Nondeterminism in WebAssembly.
-13. Polyfill: Polyfill to JavaScript.
-14. Portability: WebAssembly's binary format is designed to be executable efficiently on a variety of operating systems and instruction set architectures, on the Web and off the Web.
-15. PostMVP: Essential Post-MVP features: threads, fixed-width SIMD, zero-cost exception handling.
-16. TextFormat
-17. Tooling: editors, compilers and language virtual machines, debuggers, sanitizers for non-memory-safe languages, opt-in security enhancements for developers' own code, profilers, process dump.
-18. UseCases: inside/outside the browser, how WebAssembly can be used?
-  1. Entire code base in Web Assembly.
-  2. Main frame in Web Assembly, but the UI is in JavaScript / HTML.
-  3. Re-use existing code by targeting Web Assembly, embedded in a larger JavaScript / HTML application. This could be anything from simple helper libraries, to compute-oriented task offload.
-19. Web: Browser Embedding.
+## [High Level Goals](https://github.com/WebAssembly/design/blob/master/HighLevelGoals.md)
+
+1. Define a [portable](https://github.com/WebAssembly/design/blob/master/Portability.md), size- and load-time-efficient binary format.
+2. Specify and implement incrementally: [Minimum Viable Product (MVP)](https://github.com/WebAssembly/design/blob/master/MVP.md) primarily aimed at [C/C++](https://github.com/WebAssembly/design/blob/master/CAndC%2B%2B.md), [polyfill](https://github.com/WebAssembly/design/blob/master/Polyfill.md), essential [post-MVP](https://github.com/WebAssembly/design/blob/master/PostMVP.md) features, [future features](https://github.com/WebAssembly/design/blob/master/FutureFeatures.md).
+3. Design to execute within and integrate well with the existing [Web platform](https://github.com/WebAssembly/design/blob/master/Web.md).
+4. Design to support [non-browser embeddings](https://github.com/WebAssembly/design/blob/master/NonWeb.md) as well.
+5. Make a great platform: build a new LLVM backend for WebAssembly and an accompanying clang port; promote other compilers and tools targeting WebAssembly; and enable other useful [tooling](https://github.com/WebAssembly/design/blob/master/Tooling.md).
+
+## [FAQ](https://github.com/WebAssembly/design/blob/master/FAQ.md)
+
+1. Why create a new standard when there is already asm.js?
+2. What are WebAssembly's use cases?
+3. Can the polyfill really be efficient?
+4. Is WebAssembly only for C/C++ programmers?
+5. What compilers can I use to build WebAssembly programs?
+6. Will WebAssembly support View Source on the Web?
+7. What's the story for Emscripten users?
+8. Is WebAssembly trying to replace JavaScript?
+9. Why not just use LLVM bitcode as a binary format?
+
+## [Use Cases](https://github.com/WebAssembly/design/blob/master/UseCases.md)
+
+How WebAssembly can be used?
+
+1. Entire code base in Web Assembly.
+2. Main frame in Web Assembly, but the UI is in JavaScript / HTML.
+3. Re-use existing code by targeting Web Assembly, embedded in a larger JavaScript / HTML application. This could be anything from simple helper libraries, to compute-oriented task offload.
+
+## Other Documents
+
+1. [AstSemantics](https://github.com/WebAssembly/design/blob/master/AstSemantics.md): Abstract Syntax Tree Semantics: types, linear memory, local/global variables, control flow structures, calls, literals, expressions with control flow, 32/64-bit integer operations, floating point operations; datatype conversions, truncations, reinterpretations, promotions, and demotions.
+2. [BinaryEncoding](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md): portable binary encoding of the Abstract Syntax Tree nodes, designed to allow fast startup, which includes reducing download size and allow for quick decoding.
