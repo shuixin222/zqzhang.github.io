@@ -69,8 +69,9 @@ How WebAssembly can be used?
 
 ## Other Documents
 
-1. [AstSemantics](https://github.com/WebAssembly/design/blob/master/AstSemantics.md): Abstract Syntax Tree Semantics: types, linear memory, local/global variables, control flow structures, calls, literals, expressions with control flow, 32/64-bit integer operations, floating point operations; datatype conversions, truncations, reinterpretations, promotions, and demotions.
-2. [BinaryEncoding](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md): portable binary encoding of the Abstract Syntax Tree nodes, designed to allow fast startup, which includes reducing download size and allow for quick decoding.
+1. [AST Semantics](https://github.com/WebAssembly/design/blob/master/AstSemantics.md): Abstract Syntax Tree Semantics: types, linear memory, local/global variables, control flow structures, calls, literals, expressions with control flow, 32/64-bit integer operations, floating point operations; datatype conversions, truncations, reinterpretations, promotions, and demotions.
+2. [Binary Encoding](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md): portable binary encoding of the Abstract Syntax Tree nodes, designed to allow fast startup, which includes reducing download size and allow for quick decoding.
+3. [Text Format](https://github.com/WebAssembly/design/blob/master/TextFormat.md): The text format is equivalent and isomorphic to the binary format.
 
 
 # Conclusion
