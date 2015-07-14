@@ -71,3 +71,11 @@ How WebAssembly can be used?
 
 1. [AstSemantics](https://github.com/WebAssembly/design/blob/master/AstSemantics.md): Abstract Syntax Tree Semantics: types, linear memory, local/global variables, control flow structures, calls, literals, expressions with control flow, 32/64-bit integer operations, floating point operations; datatype conversions, truncations, reinterpretations, promotions, and demotions.
 2. [BinaryEncoding](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md): portable binary encoding of the Abstract Syntax Tree nodes, designed to allow fast startup, which includes reducing download size and allow for quick decoding.
+
+
+# Conclusion
+
+WebAssembly is two things (at least):
+
+1. Standardized way across all the browser houses to enable hybrid applications – on many dimensions.
+2. Key component in Google OS convergence; kills NaCL and PNaCL.
