@@ -1,12 +1,12 @@
 ---
 layout: post
 type: post
-title: Crosswalk 9 TODO List
+title: Crosswalk Weekly 6
 ---
 
 Here only list what to be done by Zhiqiang during Crosswalk milestone 9 development.
 
-## Crosswalk 9 Features
+# Crosswalk 9 Features
 
 See the [current milestone features](https://crosswalk-project.org/jira/issues/?filter=11019) filter and watch the features so that you can receive update notification via emails.
 
@@ -29,7 +29,7 @@ Zhiqiang is also watching below features for HW video decoding and audio policy 
 | [XWALK-1669](https://crosswalk-project.org/jira/browse/XWALK-1669) | Policy integration for WebAudio API | |
 | [XWALK-1670](https://crosswalk-project.org/jira/browse/XWALK-1670) | Policy integration for WebRTC API | |
 
-## Chromium 38 Features
+# Chromium 38 Features
 
 See [Chromium Web Platform Features](http://www.chromestatus.com/features#=38) for details.
 
@@ -48,7 +48,7 @@ See [Chromium Web Platform Features](http://www.chromestatus.com/features#=38) f
 | Unscopables (ES6) | Unscopables allows properties to be hidden to with statement lookup rules. This is important for adding new properties to existing objects both in JavaScript and in DOM. | Enabled by default | [https://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol.unscopables](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-symbol.unscopables) | |
 | `image-rendering: pixelated` | `image-rendering: pixelated` indicates that image should be scaled "so that the image appears to be simply composed of very large pixels", e.g. using nearest-neighbour. | Enabled by default | [http://www.w3.org/TR/css4-images/#image-rendering](http://www.w3.org/TR/css4-images/#image-rendering) | Samples [jsfiddle.net/zda24/147/](jsfiddle.net/zda24/147/) and [Blink tests pixelated-](https://chromium.googlesource.com/chromium/blink/+/master/LayoutTests/css3/images/) |
 
-## Test Case Tasks
+# Test Case Tasks
 
 | JIRA Ticket | Task Description | More Info | Action |
 | :---------- | :--------------- | :-------- | :----- |
@@ -59,7 +59,7 @@ See [Chromium Web Platform Features](http://www.chromestatus.com/features#=38) f
 | [XWALK-2368](https://crosswalk-project.org/jira/browse/XWALK-2368) | [webapi] BlobBuilder is deprecated | [BlobBuilder should not be supported](https://github.com/w3c/web-platform-tests/blob/master/FileAPI/historical.html); [Don't Build Blobs, Construct Them](http://updates.html5rocks.com/2012/06/Don-t-Build-Blobs-Construct-Them) | Xie Yunxiao to revise related test cases |
 | [XWALK-2372](https://crosswalk-project.org/jira/browse/XWALK-2372) | [webapi] Update sreen orientation tests to reflect Chromium 38 implementation | [spec difference](http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fwww.w3.org%2FTR%2F2012%2FWD-screen-orientation-20120522%2F&doc2=https%3A%2F%2Fw3c.github.io%2Fscreen-orientation%2F); [implementation status](http://www.chromestatus.com/features/6191285283061760); and [layout tests](https://chromium.googlesource.com/chromium/blink/+/master/LayoutTests/screen_orientation) | Liu Xin to revise related test cases |
 
-## Test Upstream to W3C
+# Test Upstream to W3C
 
 1. [Create test cases for Vibration to cover the TODO list](http://lists.w3.org/Archives/Public/public-device-apis/2014Aug/0019.html)
 2. [Review reference files submitted to csswg-test repo](https://github.com/w3c/csswg-test/pulls/chenxix)
