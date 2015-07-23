@@ -14,7 +14,7 @@ title: Crosswalk Weekly 11
 [http://mp.weixin.qq.com/s?__biz=MzA3Mjg4MDcyNA==&mid=207961267&idx=1&sn=b98ce089af17291dd443fc4115dd8215&scene=2&from=timeline&isappinstalled=0#rd](http://mp.weixin.qq.com/s?__biz=MzA3Mjg4MDcyNA==&mid=207961267&idx=1&sn=b98ce089af17291dd443fc4115dd8215&scene=2&from=timeline&isappinstalled=0#rd)
 
 
-# Crosswalk+Intel® XDK: 移动开发解决方案
+# Crosswalk + Intel® XDK：移动开发解决方案
 
 在由HTML5梦工场主办的第四届HTML5峰会暨攻城师嘉年华(iWeb峰会)上海站会上，英特尔开源技术中心的软件工程师**孙林**，Intel XDK中国团队研发工程师的**朱文熙**发表了《Crosswalk+Intel® XDK: 移动开发解决方案》主题演讲。
 
@@ -23,7 +23,7 @@ Web应用在移动平台上有诸多优势，例如可以方便的集成云服�
 [http://www.html5dw.com/2015-iweb-sh-slzwx-ppt/](http://www.html5dw.com/2015-iweb-sh-slzwx-ppt/)
 
 
-# iWeb峰会（HTML5峰会）2015年7月19日上海站会后感想
+# iWeb峰会（HTML5峰会）上海站会后感想
 
 网友 **offbye** 专门从南京跑到上海参加了iWeb峰会（HTML5峰会），感觉这一天去的挺值的，几个演讲都挺精彩，干货不少啊。他对 Crosswalk 项目在峰会上的展示印象深刻。Intel的Crosswalk框架（Crosswalk 2014年Cordova还没有集成的时候我们已经用过了，可以解决Android4.0-4.3版本的移动Web页面的适配问题，现在进步很快啊，已经有自己的IDE Intel SDK了）和Intel SDK。
 
