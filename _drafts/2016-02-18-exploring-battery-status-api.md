@@ -20,7 +20,29 @@ object providing also some new events (`chargingchange`, `levelchange`,
 `chargingtimechange`, `dischargingtimechange`) you can handle to monitor the
 battery status (`charging`, `chargingTime`, `dischargingTime`, `level`).
 
+# IDL Tests
 
+Because the Battery Status API specification has a statement in Conformance
+section as
+
+> Implementations that use ECMAScript to implement the APIs defined in this
+  specification must implement them in a manner consistent with the ECMAScript
+  Bindings defined in the Web IDL specification, as this specification uses
+  that specification and terminology.
+
+... we are able to create a test file based on W3C
+[idlharness.js](https://github.com/w3c/testharness.js/blob/master/idlharness.js)
+testing framework to check the IDL fragments in this specification. See
+
+http://w3c-test.org/battery-status/battery-interface-idlharness.html
+
+Note that Google Chrome Version 49.0.2623.28 beta-m (64-bit) on Windows 8.1
+has 4 failures which are not specific to Battery Status API:
+
+* the first one due to throwing instead of rejecting on promise returning
+  methods (in this case, getBattery())
+* the second due to a general bug of Chrome with WebIDL, see [Chrome issue
+  239915](https://code.google.com/p/chromium/issues/detail?id=239915)
 
 # Reference
 
