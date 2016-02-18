@@ -17,9 +17,7 @@ where lists another 6 vendors, or
 
 ## The product
 
-Some 
-
-* [Product Brief for Boards and 
+* [Product Brief for Boards and
   Kits](http://www.intel.com/content/www/us/en/support/boards-and-kits/000005664.html)
   This document describes the features and benefits and high-level
   specifications.
@@ -35,4 +33,4 @@ we can set up environment as
 * Assemble the Intel Edison board with the Arduino expansion board follow
   instructions
   [here](https://software.intel.com/en-us/assembling-intel-edison-board-with-arduino-expansion-board).
-* Download 
+* Download
