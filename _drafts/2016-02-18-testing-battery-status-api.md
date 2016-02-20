@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: Exploring Battery Status API
+title: Testing Battery Status API
 ---
 
 # Introduction
