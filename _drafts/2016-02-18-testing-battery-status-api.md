@@ -6,19 +6,22 @@ title: Testing Battery Status API
 
 # Introduction
 
-As of 20 August 2015, W3C Battery Status API improved its `security and privacy
-considerations` section since its W3C Candidate Recommendation 09 December 2014.
-
-As CR exit criterion said, it needs two interoperable deployed implementations
-of each feature. Among the only three browsers that supported the Battery Status
-API, we chose Chrome and Firefox to explore the API since Opera is based on the
-same browser engine (Blink) as Chrome.
-
 The Battery Status API extends `window.navigator` with a `navigator.getBattery()`
 method returning a battery promise, which is resolved in a `BatteryManager`
 object providing also some new events (`chargingchange`, `levelchange`,
 `chargingtimechange`, `dischargingtimechange`) you can handle to monitor the
 battery status (`charging`, `chargingTime`, `dischargingTime`, `level`).
+
+To addvance the Battery Status API specification to Proposed Recommendation and
+then to Recommendation from W3C Candidate Recommendation, it needs at least two
+interoperable deployed implementations of each feature. Among the only three
+browsers that supported the Battery Status API, we chose Chrome and Firefox to
+explore the API as Opera is based on the same browser engine (Blink) as Chrome.
+
+To check implementations interoperability, it is good to create a conformance
+test suite based on the specification. This article is to describe how to create
+such test suite, how to analyze failure and improve test cases, how to use the
+test suite for using the Battery Status API in your applications.
 
 # IDL Tests
 
