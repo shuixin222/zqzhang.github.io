@@ -23,7 +23,9 @@ test suite based on the specification. This article is to describe how to create
 such test suite, how to analyze failure and improve test cases, how to use the
 test suite for using the Battery Status API in your applications.
 
-# IDL Tests
+# What to be tested?
+
+## IDL fragments
 
 Because the Battery Status API specification has a statement in Conformance
 section as
@@ -46,6 +48,25 @@ has 4 failures which are not specific to Battery Status API:
   methods (in this case, getBattery())
 * the second due to a general bug of Chrome with WebIDL, see [Chrome issue
   239915](https://code.google.com/p/chromium/issues/detail?id=239915)
+
+## MUST, MUST NOT
+
+The [RFC2119](https://tools.ietf.org/html/rfc2119) key word `must` defines an
+absolute requirement of the specification, while `must not` defines an absolute
+prohibition of the specification. Test suite shall has test cases cover all
+statements in normative sections of the specification with one of the two key
+words.
+
+> The `getBattery()` method, when invoked, must run the following steps:
+
+For this statement and the 5 steps followed, we can check that
+
+* `navigator.getBattery()` return `BatteryManager`
+* `navigator.getBattery()` shall always return the same promise
+
+Thus created this test:
+
+http://w3c-test.org/battery-status/battery-promise.html
 
 # Reference
 
