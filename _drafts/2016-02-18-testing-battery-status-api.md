@@ -68,6 +68,19 @@ Thus created this test:
 
 http://w3c-test.org/battery-status/battery-promise.html
 
+> The user agent must not reject the battery promise.
+
+This statement indicates that
+
+```js
+navigator.getBattery().then(function(battery) {
+  // battery checking
+}, function(error) {
+  // assert_unreached(error.message);
+});
+```
+
+
 # Reference
 
 * [W3C Battery Status API Specification](https://www.w3.org/TR/battery-status/)
