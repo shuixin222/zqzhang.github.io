@@ -297,11 +297,14 @@ or after the charger unplugged in (event #14 to #17).
 
 # What to do next?
 
-Remove the test pre-condition that "the battery must not be full or reach full
-capacity during the time the test is run" from
-[battery-plugging-in-manual.html](http://w3c-test.org/battery-status/battery-plugging-in-manual.html)
-and
-[battery-unplugging-manual.html](http://w3c-test.org/battery-status/battery-unplugging-manual.html)
+* Check Chromium's implementation of Battery Status API to confirm the findings.
+* Update the test pre-condition that "the battery must not be full or reach full
+  capacity during the time the test is run" in
+  [battery-plugging-in-manual.html](http://w3c-test.org/battery-status/battery-plugging-in-manual.html)
+  and
+  [battery-unplugging-manual.html](http://w3c-test.org/battery-status/battery-unplugging-manual.html)
+* Update testing results.
+* Report the findings and results to DAP working group.
 
 # Reference
 
