@@ -295,7 +295,7 @@ However, if we remove the battery not full pre-condition from these two test
 files, we can get all 4 events fired after charger plugged in (event #1 to #9),
 or after the charger unplugged in (event #14 to #17).
 
-## What to do next?
+# What to do next?
 
 Remove the test pre-condition that "the battery must not be full or reach full
 capacity during the time the test is run" from
