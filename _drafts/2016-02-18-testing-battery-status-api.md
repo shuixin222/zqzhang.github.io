@@ -83,6 +83,7 @@ navigator.getBattery().then(function(battery) {
 > The `charging` attribute must be set to `false` if the battery is discharging,
   and set to `true`, if the battery is charging, the implementation is unable to
   report the state, or there is no battery attached to the system, or otherwise.
+
 > The `level` attribute must be set to 0 if the system's battery is depleted and
   the system is about to be suspended, and to 1.0 if the battery is full, the
   implementation is unable to report the battery's level, or there is no battery
@@ -99,8 +100,8 @@ http://w3c-test.org/battery-status/battery-discharging-manual.html
 
 http://w3c-test.org/battery-status/battery-full-manual.html
 
-... to check the 4 attributes' values from the battery promise and check the
-`levelchange` event fired during charging or discharging.
+... to check battery status (`charging`, `chargingTime`, `dischargingTime`,
+`level`) and the `levelchange` event fired during charging or discharging.
 
 However it is difficult to check the `chargingtimechange` or
 `dischargingtimechange` events because the definition of how often these two
@@ -110,21 +111,23 @@ these statements.
 > When the battery charging time is updated, the user agent must queue a task
   which sets the `chargingTime` attribute's value and fires a simple event named
   `chargingtimechange` at the `BatteryManager` object.
+
 > When the battery discharging time is updated, the user agent must queue a task
   which sets the `dischargingTime` attribute's value and fires a simple event
   named `dischargingtimechange` at the `BatteryManager` object.
+
+
+We then designed these test files trying to get all the 4 events fired in each
+condition but failed.
 
 http://w3c-test.org/battery-status/battery-plugging-in-manual.html
 
 http://w3c-test.org/battery-status/battery-unplugging-manual.html
 
-We designed these test files trying to get all the 4 events fired in each
-condition, but failed.
-
 # Failure analysis
 
-To analyze the failure of the tests above, developed an example to read out all
-events fired and the attributes' values to check what happened.
+To root cause failures of the tests above, we developed an example to read out
+all events fired and the battery status to check what happened.
 
 https://zqzhang.github.io/demo/battery/example.html
 
@@ -209,62 +212,25 @@ Event #28 dischargingtimechange: not charging: chargingTime Infinity discharging
 Event #29 levelchange: not charging: chargingTime Infinity dischargingTime 3853 level 0.54
 ```
 
+From the log above, we can see that Chrome for desktop
+
+* gets often level changes;
+* always reports `chargingTime` as `Infinity` until the battery is full where
+  it reports 0; thus
+* [battery-plugging-in-manual.html](http://w3c-test.org/battery-status/battery-plugging-in-manual.html)
+  has to run long time to complete the tests; and
+* [battery-unplugging-manual.html](http://w3c-test.org/battery-status/battery-unplugging-manual.html)
+  cannot get all 4 events fired (Event #23 to #29) given the current being
+  test pre-condition that the battery must not be full or reach full capacity
+  during the time the test is run.
+
+However, if we remove the battery not full pre-condition from these two test
+files, we can get all 4 events fired after charger plugged in (event #1 to #8),
+or after the charger unplugged in (event #10 to #14).
+
 ## Firefox Nightly 47 on Windows 8.1
 
 ```
-not charging: chargingTime Infinity dischargingTime 7500 level 0.7
-[charger plugged in]
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 5134 level 0.7
-Event chargingchange: charging: chargingTime Infinity dischargingTime Infinity level 0.7
-Event dischargingtimechange: charging: chargingTime Infinity dischargingTime Infinity level 0.7
-Event levelchange: charging: chargingTime Infinity dischargingTime Infinity level 0.8
-Event levelchange: charging: chargingTime Infinity dischargingTime Infinity level 0.9
-Event levelchange: charging: chargingTime 0 dischargingTime Infinity level 1
-Event chargingtimechange: charging: chargingTime 0 dischargingTime Infinity level 1
-[full charged]
-[charger unplugged in]
-Event chargingchange: not charging: chargingTime Infinity dischargingTime Infinity level 1
-Event chargingtimechange: not charging: chargingTime Infinity dischargingTime Infinity level 1
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 8541 level 1
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 9181 level 1
-Event levelchange: not charging: chargingTime Infinity dischargingTime 7063 level 0.9
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 7063 level 0.9
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 7631 level 0.9
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 6740 level 0.9
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 5962 level 0.9
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 6127 level 0.9
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 7162 level 0.9
-Event levelchange: not charging: chargingTime Infinity dischargingTime 5130 level 0.7
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 5130 level 0.7
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 5190 level 0.7
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 4454 level 0.7
-Event levelchange: not charging: chargingTime Infinity dischargingTime 5015 level 0.6
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 5015 level 0.6
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 4854 level 0.6
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 5198 level 0.6
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 4236 level 0.6
-[charger plugged in]
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 4750 level 0.6
-Event chargingchange: charging: chargingTime Infinity dischargingTime Infinity level 0.8
-Event levelchange: charging: chargingTime Infinity dischargingTime Infinity level 0.8
-Event dischargingtimechange: charging: chargingTime Infinity dischargingTime Infinity level 0.8
-Event levelchange: charging: chargingTime Infinity dischargingTime Infinity level 0.9
-Event levelchange: charging: chargingTime Infinity dischargingTime Infinity level 0.8
-[charger unplugged in]
-Event levelchange: charging: chargingTime Infinity dischargingTime Infinity level 0.9
-Event chargingchange: not charging: chargingTime Infinity dischargingTime Infinity level 0.9
-Event levelchange: not charging: chargingTime Infinity dischargingTime 5865 level 0.8
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 5865 level 0.8
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 5289 level 0.8
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 5794 level 0.8
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 5590 level 0.8
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 5467 level 0.8
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 5329 level 0.8
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 5456 level 0.8
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 4988 level 0.8
-Event dischargingtimechange: not charging: chargingTime Infinity dischargingTime 4046 level 0.8
-
-Battery Status API Example
 not charging: chargingTime Infinity dischargingTime 2580 level 0.6
 [charger plugged in]
 Event #1 dischargingtimechange: not charging: chargingTime Infinity dischargingTime Infinity level 0.6
@@ -318,6 +284,24 @@ Event #44 dischargingtimechange: not charging: chargingTime Infinity discharging
 Event #45 levelchange: not charging: chargingTime Infinity dischargingTime 3853 level 0.5
 Event #46 dischargingtimechange: not charging: chargingTime Infinity dischargingTime 3853 level 0.5
 ```
+
+From the log above, we can see that Firefox for desktop
+
+* gets often dischargingTime changes than level;
+* always reports `chargingTime` as `Infinity` until the battery is full where
+  it reports 0.
+
+However, if we remove the battery not full pre-condition from these two test
+files, we can get all 4 events fired after charger plugged in (event #1 to #9),
+or after the charger unplugged in (event #14 to #17).
+
+## What to do next?
+
+Remove the test pre-condition that "the battery must not be full or reach full
+capacity during the time the test is run" from
+[battery-plugging-in-manual.html](http://w3c-test.org/battery-status/battery-plugging-in-manual.html)
+and
+[battery-unplugging-manual.html](http://w3c-test.org/battery-status/battery-unplugging-manual.html)
 
 # Reference
 
