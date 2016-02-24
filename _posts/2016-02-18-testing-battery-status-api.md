@@ -39,7 +39,7 @@ section as
 [idlharness.js](https://github.com/w3c/testharness.js/blob/master/idlharness.js)
 testing framework to check the IDL fragments in this specification. See
 
-http://w3c-test.org/battery-status/battery-interface-idlharness.html
+[battery-interface-idlharness.html](http://w3c-test.org/battery-status/battery-interface-idlharness.html)
 
 Note that Google Chrome Version 49.0.2623.28 beta-m (64-bit) on Windows 8.1
 has 4 failures which are not specific to Battery Status API:
@@ -66,7 +66,7 @@ For this statement and the 5 steps followed, we can check that
 
 Thus created this test:
 
-http://w3c-test.org/battery-status/battery-promise.html
+[battery-promise.html](http://w3c-test.org/battery-status/battery-promise.html)
 
 > The user agent must not reject the battery promise.
 
@@ -94,11 +94,11 @@ navigator.getBattery().then(function(battery) {
 Together with other statements for `chargingTime` and `dischargingTime`,
 we designed these test files
 
-http://w3c-test.org/battery-status/battery-charging-manual.html
+[battery-charging-manual.html](http://w3c-test.org/battery-status/battery-charging-manual.html)
 
-http://w3c-test.org/battery-status/battery-discharging-manual.html
+[battery-discharging-manual.html](http://w3c-test.org/battery-status/battery-discharging-manual.html)
 
-http://w3c-test.org/battery-status/battery-full-manual.html
+[battery-full-manual.html]http://w3c-test.org/battery-status/battery-full-manual.html)
 
 ... to check battery status (`charging`, `chargingTime`, `dischargingTime`,
 `level`) and the `levelchange` event fired during charging or discharging.
@@ -120,16 +120,16 @@ these statements.
 We then designed these test files trying to get all the 4 events fired in each
 condition but failed.
 
-http://w3c-test.org/battery-status/battery-plugging-in-manual.html
+[battery-plugging-in-manual.html](http://w3c-test.org/battery-status/battery-plugging-in-manual.html)
 
-http://w3c-test.org/battery-status/battery-unplugging-manual.html
+[battery-unplugging-manual.html](http://w3c-test.org/battery-status/battery-unplugging-manual.html)
 
 # Failure analysis
 
 To root cause failures of the tests above, we developed an example to read out
 all events fired and the battery status to check what happened.
 
-https://zqzhang.github.io/demo/battery/example.html
+[https://zqzhang.github.io/demo/battery/example.html](https://zqzhang.github.io/demo/battery/example.html)
 
 ```js
 window.onload = function () {
