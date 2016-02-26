@@ -310,6 +310,7 @@ or after the charger unplugged in (event #14 to #17).
 
 * [W3C Battery Status API Specification](https://www.w3.org/TR/battery-status/)
 * [W3C Battery Status API test suite](http://w3c-test.org/battery-status/)
+* [W3C Battery Status API testing results](https://w3c.github.io/test-results/battery-status/all.html)
 * [MDN Battery Status
   API](https://developer.mozilla.org/en-US/docs/Web/API/Battery_Status_API)
 * [MDN Retrieving Battery status
