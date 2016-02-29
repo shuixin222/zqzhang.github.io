@@ -53,7 +53,7 @@ has 4 failures which are not specific to Battery Status API:
 
 The [RFC2119](https://tools.ietf.org/html/rfc2119) key word `must` defines an
 absolute requirement of the specification, while `must not` defines an absolute
-prohibition of the specification. Test suite shall has test cases cover all
+prohibition of the specification. Test suite shall have test cases cover all
 statements in normative sections of the specification with one of the two key
 words.
 
@@ -98,7 +98,7 @@ we designed these test files
 
 [battery-discharging-manual.html](http://w3c-test.org/battery-status/battery-discharging-manual.html)
 
-[battery-full-manual.html]http://w3c-test.org/battery-status/battery-full-manual.html)
+[battery-full-manual.html](http://w3c-test.org/battery-status/battery-full-manual.html)
 
 ... to check battery status (`charging`, `chargingTime`, `dischargingTime`,
 `level`) and the `levelchange` event fired during charging or discharging.
@@ -126,8 +126,9 @@ condition but failed.
 
 # Failure analysis
 
-To root cause failures of the tests above, we developed an example to read out
-all events fired and the battery status to check what happened.
+To identify the root cause for failures in the tests above, we developed an
+example to read out all events fired and the battery status to check what
+happened.
 
 [https://zqzhang.github.io/demo/battery/example.html](https://zqzhang.github.io/demo/battery/example.html)
 
@@ -172,7 +173,7 @@ window.onload = function () {
 };
 ```
 
-## Google Chrome 49 beta on Windows 8.1
+#### Google Chrome 49 beta on Windows 8.1
 
 ```
 not charging: chargingTime Infinity dischargingTime 2580 level 0.61
@@ -228,7 +229,7 @@ However, if we remove the battery not full pre-condition from these two test
 files, we can get all 4 events fired after charger plugged in (event #1 to #8),
 or after the charger unplugged in (event #10 to #14).
 
-## Firefox Nightly 47 on Windows 8.1
+#### Firefox Nightly 47 on Windows 8.1
 
 ```
 not charging: chargingTime Infinity dischargingTime 2580 level 0.6
