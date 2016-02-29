@@ -303,9 +303,12 @@ or after the charger unplugged in (event #14 to #17).
   capacity during the time the test is run" in
   [battery-plugging-in-manual.html](http://w3c-test.org/battery-status/battery-plugging-in-manual.html)
   and
-  [battery-unplugging-manual.html](http://w3c-test.org/battery-status/battery-unplugging-manual.html)
-* Update testing results.
-* Report the findings and results to DAP working group.
+  [battery-unplugging-manual.html](http://w3c-test.org/battery-status/battery-unplugging-manual.html).
+  **Done**, see the latest test suite.
+* Update testing results. **Done**, see
+  [https://w3c.github.io/test-results/battery-status/20160226.html](https://w3c.github.io/test-results/battery-status/20160226.html).
+* Report the findings and results to DAP working group. **Done**, see
+  [https://lists.w3.org/Archives/Public/public-device-apis/2016Feb/0073.html](https://lists.w3.org/Archives/Public/public-device-apis/2016Feb/0073.html).
 
 # Reference
 
