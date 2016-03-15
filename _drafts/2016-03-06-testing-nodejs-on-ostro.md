@@ -62,11 +62,13 @@ to Intel Edison following these steps:
 4. Download the `ostro-image-dev-edison` image.
 5. Extract the image, enter the `toFlash` sub-directly and execute the
    `flashall.sh` script:
+
    ```
    $ tar xzvf ostro-image-dev-edison-<build>.toflash.tar.bz2
    $ cd toFlash
    $ sudo ./flashall.sh
    ```
+
 6. Plug in the second micro-USB cable to the J16 connector as instructed by
    the running flashall script.
 7. Wait for all the images to flash. You will see the progress on both the
@@ -85,17 +87,34 @@ target device.
    help](https://help.github.com/articles/generating-an-ssh-key/)).
 2. Connect to the target device using a serial port terminal program, for
    example:
+
    ```
    $ sudo screen /dev/ttyUSB0 115200
    ```
+
 3. Save the contents from your workstation’s `$HOME/.ssh/id_rsa.pub` public key
    file to the device's `$HOME/.ssh/authorized_keys` , either by editing the
    `authorized_keys` file with `vi` or copying it using a USB thumbdrive.
 4. Make note of the device's IP address (using `ifconfig`) and reboot the device.
 5. Login from the host using ssh with the private key (from host) and the IP
    address of your device, for example:
+
    ```
    # ssh root@192.168.2.2 -i $HOME/.ssh/id_rsa
    ```
 
 ## Testing Node.js
+
+Upstream Node.js JavaScript runtime is built into Ostro image from its LTS
+distribution with minnor update to generate pkg-config file for node and install
+it during make install. For example, the current being sources are:
+
+* http://nodejs.org/dist/v4.2.4/node-v4.2.4.tar.gz
+* https://nodejs.org/download/release/v4.2.4/node-v4.2.4-headers.tar.gz
+* 0002-generate-pkg-config-file-for-node-and-install.patch
+* 0001-nodejs-add-compile-flag-options-for-quark.patch
+
+The most intuitive way to test the Node.js runtime is to run all the test cases
+from upstream Node.js JavaScript runtime project on Ostro OS supported devices,
+to collect the test results and log messages to generate a well-formated test
+data.
