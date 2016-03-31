@@ -114,7 +114,89 @@ it during make install. For example, the current being sources are:
 * 0002-generate-pkg-config-file-for-node-and-install.patch
 * 0001-nodejs-add-compile-flag-options-for-quark.patch
 
+### Checking node binary is present
+
+First thinging first, one is likely to check where is the node binary integrated
+and which version it is.
+
+```sh
+$ which node
+
+$ node --version
+```
+
+These two checkpoints are used for sanity testing which are then used by
+Continuous Integration (CI) system.
+
+### Saying hello to the world
+
+This test is going to print out `Hello World!` messages via both
+`console.log('Hello World!')` and a simple HTTP server that responds to every
+request with the plain text message "Hello World!".
+
+The `hello-console.js` is very simple:
+
+```js
+console.log('Hello World!');
+```
+
+The `hello-http.js` looks like this:
+
+```js
+var http = require('http');
+
+var body = 'Hello World!';
+var port = 12346;
+
+var server = http.createServer(function(req, res) {
+    res.writeHead(200, {'content-type': 'text/plain'});
+    res.end(body);
+});
+
+server.listen(port, function() {
+    var options = {
+        host: '127.0.0.1',
+        port: port,
+        path: '/',
+        method: 'GET',
+        headers: {
+            accept: 'text/plain'
+        }
+    };
+
+    var req = http.request(options, function(res) {
+        res.setEncoding('UTF8');
+
+        res.on('data', function(data) {
+            console.log(data);
+        });
+
+        server.close();
+    });
+    req.end();
+});
+```
+
+### Running upstream Node.js tests
+
+For Node.js JavaScript runtime, there are plenty of test cases at
+https://github.com/nodejs/node/tree/master/test.
+
 The most intuitive way to test the Node.js runtime is to run all the test cases
 from upstream Node.js JavaScript runtime project on Ostro OS supported devices,
 to collect the test results and log messages to generate a well-formated test
 data.
+
+Test steps:
+- Make sure user data has enough available space, e.g. 500+MB.
+- Download corresponding Node.js release for example from
+  http://nodejs.org/dist/v4.2.4/node-v4.2.4.tar.gz
+- Uncompressed the node package and then compress the files (in their original
+  hierarchy) in `tools`, `test` and `deps/v8/tools` subdirectories into package,
+  e.g. named `nodejs.tar`.
+- Use oeruntime API to push the compressed tests package to the target device
+  under test.
+- Uncompress the test package, run the test scripts and then parse the testing
+  log and send parsed results to the host.
+
+The tests shall be run completely without failure or error.
