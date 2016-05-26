@@ -63,3 +63,9 @@ a {
 .tiny {
   padding-left: 52px;
 }
+
+@media screen and (max-width: 600px) {
+  .content {
+    width: 100%;
+  }
+}
