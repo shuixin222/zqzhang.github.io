@@ -10,7 +10,7 @@ move to another company. My last day at Intel is Wednesday, June 29.
 I'll still be a committer and reviewer for the W3C web-platform-tests and
 csswg-test. I'll stay on as test facilitator for Indexed Database API and
 most specifications published by the Device and Sensors Working Group. I hope
-to contribute techinical efforts to Web Media specifications and code stack,
+to contribute technical efforts to Web Media specifications and code stack,
 and to keep update on Web Payment, Performance and Security. Please drop me
 (@zqzhang) a note if you want me to take a look at your pull request or issue.
 
@@ -28,7 +28,7 @@ been used by Crosswalk Project, crosswalk web testing service and demo express.
 
 Special thanks to Tina Zhao for making travel reports, monthly status and
 testing reports. I really enjoyed the business travelling with her. Yes I owe
-her a cup of coffee for sliently referencing her style and words of monthly
+her a cup of coffee for silently referencing her style and words of monthly
 status report and testing reports. Maybe I can make an Intel recognition.
 
 Special thanks to Fan Zhao for recruiting me as
