@@ -39,3 +39,12 @@ title: 学习新的编程知识
 
 其中，Python方面，有两个特别优秀的测试工具，一是W3C wpt-tools，一是谷歌的
 Chromium for Android的测试框架，两者都是开源的，弄明白它们。
+
+## 参考资料
+
+* [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
+* [Java Programming Cheat Sheet](http://introcs.cs.princeton.edu/java/11cheatsheet/)
+* [Java Quick Reference
+  Guide](http://web.cerritos.edu/jwilson/SitePages/java_language_resources/Java_Quick_Reference_Guide.pdf)
+* [Java Platform Standard Edition 8
+  Documentation](http://docs.oracle.com/javase/8/docs/)
