@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: 注意力是最宝贵的财富
+title: 注意力才是最宝贵的财富
 ---
 
 

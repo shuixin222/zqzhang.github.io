@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: 活在未来
+title: 活在未来才能遇见财富
 ---
 
 
